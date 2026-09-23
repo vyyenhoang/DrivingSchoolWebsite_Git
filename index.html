@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public Star Driving School | G2 & G Driving Lessons in Scarborough & Durham</title>
+  <meta name="description" content="MTO-approved driving school serving Scarborough, North York, Pickering, Ajax, Whitby and Oshawa. G2 lessons from $50/hr, G lessons from $60/hr, BDE packages, free pick-up and drop-off. Book online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f5b400' d='M12 2l2.9 6.6 7.1.7-5.3 4.8 1.6 7L12 17.3 5.7 21l1.6-7L2 9.3l7.1-.7z'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">
+        <span class="brand-star" aria-hidden="true">★</span>
+        <span class="brand-text">Public Star <span>Driving School</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav">
+        <a href="#packages">Packages</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#areas">Service Areas</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#book" class="btn btn-primary btn-sm">Book a Lesson</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">MTO-Approved Beginner Driver Education</p>
+          <h1>Pass your G2 or G road test with confidence.</h1>
+          <p class="lead">
+            Patient, certified instructors. Free pick-up and drop-off. Flexible scheduling
+            7 days a week across Scarborough, North York, Pickering, Ajax, Whitby and Oshawa.
+          </p>
+          <div class="hero-cta">
+            <a href="#book" class="btn btn-primary">Book a Lesson</a>
+            <a href="#packages" class="btn btn-outline">See Packages</a>
+          </div>
+          <ul class="hero-points">
+            <li>G2 lessons from <strong>$50/hr</strong></li>
+            <li>G lessons from <strong>$60/hr</strong></li>
+            <li>Road test car included in packages</li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <div class="price-badge">
+            <span class="price-badge-label">Starting at</span>
+            <span class="price-badge-amount">$50</span>
+            <span class="price-badge-unit">per hour</span>
+          </div>
+          <ul class="checklist">
+            <li>One-on-one in-car training</li>
+            <li>Dual-brake, fully insured vehicles</li>
+            <li>Free pick-up &amp; drop-off</li>
+            <li>Road test booking assistance</li>
+            <li>Ministry BDE certificate (insurance discount)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div><strong>7 days</strong><span>a week scheduling</span></div>
+        <div><strong>6 cities</strong><span>served across the GTA</span></div>
+        <div><strong>1-on-1</strong><span>in-car instruction</span></div>
+        <div><strong>Free</strong><span>pick-up &amp; drop-off</span></div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Packages &amp; Pricing</p>
+          <h2>Simple, transparent pricing</h2>
+          <p class="section-sub">Choose the option that fits where you are on your licensing journey. All prices are before HST.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Package categories">
+          <button class="tab is-active" role="tab" data-tab="bde" aria-selected="true">Full BDE Course</button>
+          <button class="tab" role="tab" data-tab="g2" aria-selected="false">G2 Lessons &amp; Road Test</button>
+          <button class="tab" role="tab" data-tab="g" aria-selected="false">G Lessons &amp; Road Test</button>
+        </div>
+
+        <div class="tab-panel is-active" data-panel="bde">
+          <p class="panel-intro">
+            Complete Ministry-approved Beginner Driver Education. Graduates can take their G2 road test
+            after <strong>8 months</strong> instead of 12 and may qualify for an insurance discount.
+          </p>
+          <div class="cards" id="bde-cards"></div>
+        </div>
+
+        <div class="tab-panel" data-panel="g2">
+          <p class="panel-intro">
+            Already have your G1? Book individual lessons or an hours-plus-road-test bundle.
+            Every bundle includes the <strong>use of the instructor's car for your G2 road test</strong>.
+          </p>
+          <div class="table-wrap">
+            <table class="price-table" id="g2-table"></table>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="g">
+          <p class="panel-intro">
+            Upgrading from G2 to a full G? Sharpen your highway and city skills with a certified instructor.
+            Every bundle includes the <strong>use of the instructor's car for your G road test</strong>.
+          </p>
+          <div class="table-wrap">
+            <table class="price-table" id="g-table"></table>
+          </div>
+        </div>
+
+        <p class="fine-print">Road test fees payable to DriveTest are not included. Prices subject to change.</p>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why-us" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Why Public Star</p>
+          <h2>Learn from instructors who actually care</h2>
+        </div>
+        <div class="features">
+          <article class="feature">
+            <div class="feature-icon">🎓</div>
+            <h3>MTO-Certified Instructors</h3>
+            <p>Every instructor is licensed by the Ontario Ministry of Transportation and trained to teach defensive driving.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">🚗</div>
+            <h3>Road Test Car Included</h3>
+            <p>Take your test in the same dual-brake car you trained in. No stress about insurance or borrowing a vehicle.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">📍</div>
+            <h3>Free Pick-Up &amp; Drop-Off</h3>
+            <p>We come to your home, school or workplace anywhere in our service area, at no extra cost.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">🗓️</div>
+            <h3>Flexible Scheduling</h3>
+            <p>Lessons available mornings, evenings and weekends. Book around your school or work schedule.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">🧭</div>
+            <h3>Local Test Route Knowledge</h3>
+            <p>We practice the real routes used at Metro East, Port Union, Oshawa and other nearby DriveTest centres.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">💬</div>
+            <h3>Patient &amp; Multilingual</h3>
+            <p>Nervous or first-time drivers welcome. Ask us about lessons in your preferred language.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE AREAS -->
+    <section id="areas" class="section">
+      <div class="container areas-grid">
+        <div>
+          <p class="eyebrow">Service Areas</p>
+          <h2>Serving Scarborough &amp; Durham Region</h2>
+          <p class="section-sub">
+            We offer in-car lessons with free pick-up and drop-off throughout the east GTA.
+            If you don't see your neighbourhood, just ask.
+          </p>
+          <ul class="area-list">
+            <li>Scarborough</li>
+            <li>North York</li>
+            <li>Pickering</li>
+            <li>Ajax</li>
+            <li>Whitby</li>
+            <li>Oshawa</li>
+          </ul>
+        </div>
+        <div class="area-card">
+          <h3>Nearby DriveTest Centres</h3>
+          <ul class="checklist">
+            <li>Metro East (Scarborough)</li>
+            <li>Port Union (Scarborough)</li>
+            <li>Downsview (North York)</li>
+            <li>Oshawa</li>
+          </ul>
+          <a href="#book" class="btn btn-primary btn-block">Book Your Lesson</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section id="book" class="section section-dark">
+      <div class="container booking-grid">
+        <div class="booking-copy">
+          <p class="eyebrow eyebrow-light">Book Online</p>
+          <h2>Request your lesson</h2>
+          <p>
+            Fill in the form and we'll confirm your booking by phone or email, usually within one business day.
+            No payment is required to request a lesson.
+          </p>
+          <ul class="checklist checklist-light">
+            <li>Choose any package or a single lesson</li>
+            <li>Pick the date and time that suits you</li>
+            <li>We'll pick you up from your address</li>
+          </ul>
+        </div>
+
+        <form id="booking-form" class="booking-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full name *</label>
+              <input type="text" id="name" name="Full Name" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="Phone" required autocomplete="tel" placeholder="(416) 555-0123" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="Email" required autocomplete="email" />
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="licence">Current licence *</label>
+              <select id="licence" name="Current Licence" required>
+                <option value="" disabled selected>Select one</option>
+                <option>G1</option>
+                <option>G2</option>
+                <option>G</option>
+                <option>Out-of-province / International</option>
+                <option>No licence yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="package">Package *</label>
+              <select id="package" name="Package" required>
+                <option value="" disabled selected>Select a package</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="date">Preferred date *</label>
+              <input type="date" id="date" name="Preferred Date" required />
+            </div>
+            <div class="field">
+              <label for="time">Preferred time *</label>
+              <select id="time" name="Preferred Time" required>
+                <option value="" disabled selected>Select a time</option>
+                <option>Morning (8am – 12pm)</option>
+                <option>Afternoon (12pm – 5pm)</option>
+                <option>Evening (5pm – 9pm)</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="city">City *</label>
+              <select id="city" name="City" required>
+                <option value="" disabled selected>Select your city</option>
+                <option>Scarborough</option>
+                <option>North York</option>
+                <option>Pickering</option>
+                <option>Ajax</option>
+                <option>Whitby</option>
+                <option>Oshawa</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="address">Pick-up address</label>
+              <input type="text" id="address" name="Pick-up Address" autocomplete="street-address" placeholder="Street address or intersection" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Anything else we should know?</label>
+            <textarea id="message" name="Message" rows="3" placeholder="Road test date, language preference, questions…"></textarea>
+          </div>
+
+          <!-- Spam trap: hidden from humans -->
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" />
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">Send Booking Request</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form-note">By submitting, you agree to be contacted about your booking. We never share your details.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container narrow">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Do I need to complete the full BDE course to take lessons?</summary>
+            <p>No. If you already have a G1 or G2, you can book individual lessons or an hours-plus-road-test bundle without enrolling in the full course.</p>
+          </details>
+          <details>
+            <summary>What does the BDE certificate get me?</summary>
+            <p>Graduating from a Ministry-approved BDE course lets you take your G2 road test after 8 months instead of 12, and most insurers offer a discount for new drivers who complete it.</p>
+          </details>
+          <details>
+            <summary>Can I use your car for my road test?</summary>
+            <p>Yes. Every hours-plus-road-test bundle and the Premium and Advanced BDE packages include the use of the instructor's car on test day, along with a warm-up lesson beforehand.</p>
+          </details>
+          <details>
+            <summary>How do pick-up and drop-off work?</summary>
+            <p>Your instructor picks you up from your home, school or workplace within our service area and drops you off at the end of the lesson, at no extra charge.</p>
+          </details>
+          <details>
+            <summary>How do I pay?</summary>
+            <p>No payment is required to request a booking. We'll confirm your schedule first and arrange payment by e-transfer or in person before your first lesson.</p>
+          </details>
+          <details>
+            <summary>Can I book my DriveTest appointment through you?</summary>
+            <p>Yes. We'll help you find and book an available road test slot at the DriveTest centre closest to you.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="brand brand-light">
+          <span class="brand-star" aria-hidden="true">★</span>
+          <span class="brand-text">Public Star <span>Driving School</span></span>
+        </a>
+        <p class="footer-blurb">MTO-approved driving school serving Scarborough and Durham Region.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:publicstardrivingschool@gmail.com">publicstardrivingschool@gmail.com</a></p>
+        <p>Open 7 days a week, 8am – 9pm</p>
+      </div>
+      <div>
+        <h4>Service Areas</h4>
+        <p>Scarborough · North York · Pickering<br />Ajax · Whitby · Oshawa</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="#packages">Packages</a></p>
+        <p><a href="#book">Book a Lesson</a></p>
+        <p><a href="#faq">FAQ</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Public Star Driving School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
