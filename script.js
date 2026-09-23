@@ -5,6 +5,8 @@
 
 const CONFIG = {
   bookingEmail: "publicstardrivingschool@gmail.com",
+  phoneDisplay: "(437) 777-4494",
+  phoneTel: "+14377774494",
   hst: 0.13,
 };
 
@@ -276,7 +278,7 @@ function initForm() {
       status.textContent = "Thanks! Your request has been sent. We'll confirm your lesson shortly.";
     } catch (err) {
       status.className = "form-status err";
-      status.innerHTML = `Sorry, something went wrong. Please email us directly at <a href="mailto:${CONFIG.bookingEmail}">${CONFIG.bookingEmail}</a>.`;
+      status.innerHTML = `Sorry, something went wrong. Please call <a href="tel:${CONFIG.phoneTel}">${CONFIG.phoneDisplay}</a> or email <a href="mailto:${CONFIG.bookingEmail}">${CONFIG.bookingEmail}</a>.`;
     } finally {
       btn.disabled = false;
       btn.textContent = "Send Booking Request";

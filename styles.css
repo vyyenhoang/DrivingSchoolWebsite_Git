@@ -104,6 +104,24 @@ p { margin: 0 0 1em; }
 
 .nav { display: flex; align-items: center; gap: 28px; font-weight: 600; font-size: 0.95rem; }
 .nav a:not(.btn):hover { color: var(--gold-600); }
+.nav-phone { color: var(--navy); font-weight: 800; }
+
+/* Phone links */
+.phone-link {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin-top: 22px; padding: 13px 16px;
+  border: 2px solid var(--navy); border-radius: 999px;
+  color: var(--navy); font-weight: 700; font-size: 0.95rem;
+  transition: 0.15s;
+}
+.phone-link:hover { background: var(--navy); color: #fff; }
+.inline-phone { color: var(--gold); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+.inline-phone:hover { color: #fff; }
+.sticky-call {
+  display: flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; flex-shrink: 0;
+  border-radius: 50%; background: var(--navy); color: #fff;
+}
 
 .nav-toggle {
   display: none;
@@ -369,6 +387,7 @@ span.flatpickr-weekday { color: var(--muted); font-weight: 700; font-size: 0.72r
   }
   .nav.is-open { display: flex; }
   .nav a:not(.btn) { padding: 14px 4px; border-bottom: 1px solid var(--line); }
+  .nav-phone::before { content: "📞 "; }
   .nav .btn { margin-top: 14px; padding: 14px; }
 
   /* Hero */
@@ -464,7 +483,8 @@ span.flatpickr-weekday { color: var(--muted); font-weight: 700; font-size: 0.72r
   }
   .sticky-cta.is-hidden { transform: translateY(110%); opacity: 0; pointer-events: none; }
   .sticky-cta-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
-  .sticky-cta-text strong { font-size: 0.85rem; color: var(--navy); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sticky-cta-text { flex: 1; }
+  .sticky-cta-text strong { font-size: 0.82rem; color: var(--navy); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .sticky-cta-text span { font-size: 0.75rem; color: var(--muted); }
   .sticky-cta .btn { flex-shrink: 0; padding: 11px 16px; }
 }
