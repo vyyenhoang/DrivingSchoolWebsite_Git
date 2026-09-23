@@ -1,5 +1,7 @@
 # Public Star Driving School — Website
 
+**Live site:** https://vyyenhoang.github.io/DrivingSchoolWebsite_Git/
+
 Static marketing site with an online booking form for Public Star Driving School,
 serving Scarborough, North York, Pickering, Ajax, Whitby and Oshawa.
 
@@ -46,5 +48,8 @@ Then visit http://localhost:8765.
 
 ## Deploying
 
-The site is plain HTML/CSS/JS with no build step. Upload the three files to any static
+The site is deployed automatically to GitHub Pages from the `main` branch: every push
+to `main` updates https://vyyenhoang.github.io/DrivingSchoolWebsite_Git/ within a minute.
+
+It is plain HTML/CSS/JS with no build step, so it can also be uploaded to any static
 host (GitHub Pages, Netlify, Vercel, cPanel, etc.).
