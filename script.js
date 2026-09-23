@@ -113,10 +113,10 @@ function renderTable(id, rows, prefix) {
         .map(
           (r) => `
         <tr>
-          <td>${r.label}${r.popular ? '<span class="pill">Popular</span>' : ""}</td>
+          <td class="label">${r.label}${r.popular ? '<span class="pill">Popular</span>' : ""}</td>
           <td class="price">${money(r.price)}</td>
-          <td class="total">${money(withTax(r.price))}</td>
-          <td><a href="#book" data-select-package="${prefix} ${r.label} – $${r.price} + HST">Book →</a></td>
+          <td class="total"><span class="total-label">With HST </span>${money(withTax(r.price))}</td>
+          <td class="action"><a href="#book" data-select-package="${prefix} ${r.label} – $${r.price} + HST">Book →</a></td>
         </tr>`
         )
         .join("")}
@@ -266,8 +266,20 @@ function initForm() {
   });
 }
 
+/* Mobile sticky CTA: hide while the booking form is on screen ------------- */
+function initStickyCta() {
+  const bar = $("#sticky-cta");
+  const book = $("#book");
+  if (!bar || !book || !("IntersectionObserver" in window)) return;
+  new IntersectionObserver(
+    ([entry]) => bar.classList.toggle("is-hidden", entry.isIntersecting),
+    { threshold: 0.15 }
+  ).observe(book);
+}
+
 /* Init --------------------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
+  initStickyCta();
   renderBdeCards();
   renderTable("#g2-table", PRICING.g2, "G2");
   renderTable("#g-table", PRICING.g, "G");
