@@ -191,10 +191,28 @@ function initForm() {
   const btn = $("#submit-btn");
   if (!form) return;
 
-  // Don't allow past dates
-  const today = new Date();
-  today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
-  $("#date").min = today.toISOString().slice(0, 10);
+  // Calendar picker (falls back to a plain text field if the library fails to load)
+  const dateInput = $("#date");
+  if (window.flatpickr) {
+    flatpickr(dateInput, {
+      minDate: "today",
+      dateFormat: "Y-m-d",          // value submitted in the email
+      altInput: true,               // what the student sees
+      altFormat: "D, M j, Y",
+      disableMobile: true,          // same calendar on phones as on desktop
+      monthSelectorType: "static",
+      onChange: () => setError(dateInput, ""),
+    });
+    // flatpickr swaps in a display input; copy our styling hooks onto it
+    const alt = dateInput.nextElementSibling;
+    if (alt) {
+      alt.placeholder = "Select a date";
+      alt.setAttribute("inputmode", "none");
+    }
+  } else {
+    dateInput.placeholder = "YYYY-MM-DD";
+    dateInput.removeAttribute("inputmode");
+  }
 
   const setError = (field, msg) => {
     const wrap = field.closest(".field");

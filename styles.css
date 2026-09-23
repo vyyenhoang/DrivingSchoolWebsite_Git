@@ -246,10 +246,15 @@ p { margin: 0 0 1em; }
 
 .booking-form { background: #fff; color: var(--ink); border-radius: 20px; padding: 32px; box-shadow: var(--shadow); }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.field { margin-bottom: 16px; }
+.field { margin-bottom: 16px; min-width: 0; } /* min-width stops wide inputs breaking the grid */
 .field label { display: block; font-weight: 700; font-size: 0.88rem; margin-bottom: 6px; }
 .field input, .field select, .field textarea {
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  display: block;
+  -webkit-appearance: none;
+  appearance: none;
   padding: 12px 14px;
   border: 1px solid #cfd5e0;
   border-radius: 10px;
@@ -265,7 +270,39 @@ p { margin: 0 0 1em; }
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(245,180,0,0.25);
 }
+.field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 8l4 4 4-4' fill='none' stroke='%235c6577' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+  padding-right: 38px;
+}
 .field.has-error input, .field.has-error select { border-color: var(--error); }
+
+/* Date picker */
+.date-wrap { position: relative; }
+.date-wrap input { padding-right: 42px; cursor: pointer; }
+.date-icon { position: absolute; right: 13px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.flatpickr-calendar {
+  font-family: inherit;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(15, 31, 61, 0.18);
+  border: 1px solid var(--line);
+}
+.flatpickr-calendar.arrowTop::before, .flatpickr-calendar.arrowTop::after,
+.flatpickr-calendar.arrowBottom::before, .flatpickr-calendar.arrowBottom::after { display: none; }
+.flatpickr-months { padding: 8px 6px 0; }
+.flatpickr-months .flatpickr-month, .flatpickr-current-month { color: var(--navy); font-weight: 800; }
+.flatpickr-current-month input.cur-year { font-weight: 800; color: var(--navy); }
+.flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month { color: var(--navy); padding: 12px; }
+.flatpickr-months .flatpickr-prev-month:hover svg, .flatpickr-months .flatpickr-next-month:hover svg { fill: var(--gold-600); }
+span.flatpickr-weekday { color: var(--muted); font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.flatpickr-day { color: var(--ink); font-weight: 600; border-radius: 50%; }
+.flatpickr-day:hover, .flatpickr-day.prevMonthDay:hover, .flatpickr-day.nextMonthDay:hover { background: var(--bg-alt); border-color: var(--bg-alt); }
+.flatpickr-day.today { border-color: var(--gold); }
+.flatpickr-day.today:hover { background: var(--bg-alt); color: var(--ink); }
+.flatpickr-day.selected, .flatpickr-day.selected:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+.flatpickr-day.flatpickr-disabled, .flatpickr-day.flatpickr-disabled:hover { color: #c3c9d4; }
 .field .error-msg { color: var(--error); font-size: 0.8rem; margin-top: 4px; display: none; }
 .field.has-error .error-msg { display: block; }
 .honey { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
