@@ -12,6 +12,7 @@ serving Scarborough, North York, Pickering, Ajax, Whitby and Oshawa.
 | `index.html` | The whole site (hero, packages, why us, service areas, booking form, FAQ, footer) |
 | `styles.css` | All styling, mobile-responsive |
 | `script.js` | Pricing data, package tables, tabs, mobile nav, booking form submission |
+| `google-apps-script/` | Script that emails bookings from the business Gmail and logs them to a Google Sheet |
 | `assets/` | Logo files: full logo, star emblem (green and light versions), browser icons, link-preview image |
 
 ## Editing prices and packages
@@ -39,29 +40,47 @@ Once Public Star has its own Google Business Profile, put its reviews link in
 
 ## Booking form
 
-Booking requests are emailed to `publicstardrivingschool@gmail.com`. The site has no
-server, so a free form-to-email service does the sending.
+The site has no server, so booking requests are handed to a service that emails them.
+`CONFIG` at the top of `script.js` picks the service. The first one that is filled in wins:
 
-### Web3Forms (active)
+1. `appsScriptUrl`: a Google Apps Script running in the business Gmail account (recommended)
+2. `web3formsKey`: Web3Forms, which emails whatever address the key was created with
+3. Neither: FormSubmit to `bookingEmail`, which was unreliable in testing
 
-The form sends through Web3Forms, using the access key in `web3formsKey` in `CONFIG` at the
-top of `script.js`. The key is tied to `publicstardrivingschool@gmail.com` and is meant to be
-public. The free plan covers 250 bookings a month. Tested successfully on 2026-09-30.
+Web3Forms recorded bookings in its dashboard, but its emails did not reach Gmail. The Apps
+Script sends each booking from publicstardrivingschool@gmail.com to itself, which Gmail
+trusts, and also adds it as a row in a Google Sheet.
 
-If `web3formsKey` is ever cleared, the form falls back to FormSubmit, which was unreliable
-in testing.
+### Setting up the Google Apps Script (one time, about 5 minutes)
+
+1. Sign in to Google as **publicstardrivingschool@gmail.com**. The script sends email as
+   whichever account creates it.
+2. Open https://sheets.new to create a Google Sheet. Name it "Public Star Bookings".
+3. In the Sheet, choose **Extensions > Apps Script**. Delete the sample code, paste in all of
+   `google-apps-script/booking-email.gs`, and press the save icon.
+4. In the toolbar's function dropdown pick **sendTestEmail**, then press **Run**. Google asks
+   for permission. Choose your account, then **Advanced > Go to project (unsafe) > Allow**.
+   The warning appears because the script is your own and not published, which is normal.
+   A test email should arrive in the inbox.
+5. Choose **Deploy > New deployment**. Click the gear icon, pick **Web app**, set
+   **Execute as: Me** and **Who has access: Anyone**, then press **Deploy**.
+6. Copy the **Web app URL**, which ends in `/exec`, and paste it into `appsScriptUrl` in
+   `script.js`. Commit and push.
+
+Each booking then arrives by email and appears in the Sheet's "Bookings" tab. Gmail's free
+limit is 100 script emails a day.
+
+To change the script later, edit it, then use **Deploy > Manage deployments**, press the
+pencil icon, choose **Version: New version**, and deploy. The URL stays the same.
 
 ### How to test
 
 Open the live site, fill in the form with test details, and press "Send Booking Request".
 
 - A green "Thanks!" message means the service accepted it. The email should arrive within
-  a minute. Check the spam folder the first time.
+  a minute. The first time, check the spam folder.
 - A red "Sorry, something went wrong" message means the service rejected it or did not
   answer within 20 seconds. The message tells the student to call or email instead.
-
-To change the destination address, edit `bookingEmail` in `CONFIG` in `script.js`
-(and create a new Web3Forms key for the new address).
 
 ## Running locally
 

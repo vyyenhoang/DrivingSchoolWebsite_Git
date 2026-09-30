@@ -7,9 +7,12 @@ const CONFIG = {
   bookingEmail: "publicstardrivingschool@gmail.com",
   phoneDisplay: "(437) 777-4494",
   phoneTel: "+14377774494",
-  // Booking emails: paste a free Web3Forms access key here (see README) for reliable
-  // delivery. Left empty, the form falls back to FormSubmit.
+  // Where booking requests are sent, first one that is filled in wins (see README):
+  // 1. Google Apps Script web app URL: emails from the business Gmail + logs to a Sheet
+  appsScriptUrl: "",
+  // 2. Web3Forms access key: emails go to the address the key was created with
   web3formsKey: "d1e0b834-c710-4da8-bdaa-271e9656a72f",
+  // 3. Neither set: FormSubmit to bookingEmail
   hst: 0.13,
 };
 
@@ -400,17 +403,25 @@ function initForm() {
     const timer = setTimeout(() => controller.abort(), 20000);
 
     try {
-      const useWeb3 = Boolean(CONFIG.web3formsKey);
-      const url = useWeb3
-        ? "https://api.web3forms.com/submit"
-        : `https://formsubmit.co/ajax/${CONFIG.bookingEmail}`;
-      const payload = useWeb3
-        ? { access_key: CONFIG.web3formsKey, subject, from_name: "Public Star website", replyto: fields.Email, ...fields }
-        : { ...fields, _subject: subject, _template: "table", _captcha: "false", _replyto: fields.Email };
+      let url, payload, headers;
+      if (CONFIG.appsScriptUrl) {
+        // text/plain keeps this a "simple" request, which Apps Script accepts from any site
+        url = CONFIG.appsScriptUrl;
+        payload = { subject, ...fields };
+        headers = { "Content-Type": "text/plain;charset=utf-8" };
+      } else if (CONFIG.web3formsKey) {
+        url = "https://api.web3forms.com/submit";
+        payload = { access_key: CONFIG.web3formsKey, subject, from_name: "Public Star website", replyto: fields.Email, ...fields };
+        headers = { "Content-Type": "application/json", Accept: "application/json" };
+      } else {
+        url = `https://formsubmit.co/ajax/${CONFIG.bookingEmail}`;
+        payload = { ...fields, _subject: subject, _template: "table", _captcha: "false", _replyto: fields.Email };
+        headers = { "Content-Type": "application/json", Accept: "application/json" };
+      }
 
       const res = await fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers,
         body: JSON.stringify(payload),
         signal: controller.signal,
       });
