@@ -7,6 +7,9 @@ const CONFIG = {
   bookingEmail: "publicstardrivingschool@gmail.com",
   phoneDisplay: "(437) 777-4494",
   phoneTel: "+14377774494",
+  // Booking emails: paste a free Web3Forms access key here (see README) for reliable
+  // delivery. Left empty, the form falls back to FormSubmit.
+  web3formsKey: "",
   hst: 0.13,
 };
 
@@ -280,32 +283,55 @@ function initForm() {
       return;
     }
 
-    const data = new FormData(form);
-    data.append("_subject", `New booking request – ${data.get("Full Name")} (${data.get("Package")})`);
-    data.append("_template", "table");
-    data.append("_captcha", "false");
-    data.append("_replyto", data.get("Email"));
+    const fields = Object.fromEntries(new FormData(form));
+    const honey = fields._honey;
+    delete fields._honey;
+    const subject = `New booking request – ${fields["Full Name"]} (${fields["Package"]})`;
+
+    // Bots fill the hidden field: pretend it worked and send nothing
+    if (honey) {
+      form.reset();
+      status.className = "form-status ok";
+      status.textContent = "Thanks! Your request has been sent.";
+      return;
+    }
 
     btn.disabled = true;
     btn.textContent = "Sending…";
 
+    // Give up after 20 seconds so the button never hangs on "Sending…"
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 20000);
+
     try {
-      const res = await fetch(`https://formsubmit.co/ajax/${CONFIG.bookingEmail}`, {
+      const useWeb3 = Boolean(CONFIG.web3formsKey);
+      const url = useWeb3
+        ? "https://api.web3forms.com/submit"
+        : `https://formsubmit.co/ajax/${CONFIG.bookingEmail}`;
+      const payload = useWeb3
+        ? { access_key: CONFIG.web3formsKey, subject, from_name: "Public Star website", replyto: fields.Email, ...fields }
+        : { ...fields, _subject: subject, _template: "table", _captcha: "false", _replyto: fields.Email };
+
+      const res = await fetch(url, {
         method: "POST",
-        headers: { Accept: "application/json" },
-        body: data,
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+        signal: controller.signal,
       });
       const json = await res.json().catch(() => ({}));
       if (!res.ok || json.success === "false" || json.success === false) {
-        throw new Error(json.message || "Request failed");
+        throw new Error(json.message || `Request failed (${res.status})`);
       }
       form.reset();
+      if ($("#date")._flatpickr) $("#date")._flatpickr.clear();
       status.className = "form-status ok";
       status.textContent = "Thanks! Your request has been sent. We'll confirm your lesson shortly.";
     } catch (err) {
+      console.warn("Booking form error:", err);
       status.className = "form-status err";
       status.innerHTML = `Sorry, something went wrong. Please call <a href="tel:${CONFIG.phoneTel}">${CONFIG.phoneDisplay}</a> or email <a href="mailto:${CONFIG.bookingEmail}">${CONFIG.bookingEmail}</a>.`;
     } finally {
+      clearTimeout(timer);
       btn.disabled = false;
       btn.textContent = "Send Booking Request";
     }

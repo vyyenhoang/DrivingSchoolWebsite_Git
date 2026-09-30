@@ -37,18 +37,36 @@ Once Public Star has its own Google Business Profile, put its reviews link in
 
 ## Booking form
 
-The form posts to [FormSubmit](https://formsubmit.co), which forwards each request as an
-email to `publicstardrivingschool@gmail.com`. No server or account is needed.
+Booking requests are emailed to `publicstardrivingschool@gmail.com`. The site has no
+server, so a free form-to-email service does the sending.
 
-**One-time activation:** the first time the form is submitted, FormSubmit sends an
-activation email to that Gmail inbox. Click the link once and all future submissions
-are delivered automatically. Until that is done, submissions are held.
+### Recommended: Web3Forms (one-time, about 2 minutes)
 
-**How to test:** open the live site, fill in the form with test details, and submit.
-Within a minute an email should arrive at the booking inbox. Check the spam folder the
-first time. If the site moves to a new domain, FormSubmit may ask to activate once more.
+1. Go to https://web3forms.com and enter `publicstardrivingschool@gmail.com` under
+   "Create your Access Key". No account or password is needed.
+2. Open the email Web3Forms sends to that inbox and copy the access key.
+3. Paste it into `web3formsKey` in `CONFIG` at the top of `script.js`, then commit and push.
 
-To change the destination address, edit `bookingEmail` in `CONFIG` in `script.js`.
+The free plan covers 250 bookings a month.
+
+### Fallback: FormSubmit
+
+While `web3formsKey` is empty, the form uses FormSubmit instead. FormSubmit sends an
+activation email on the first submission, and that link must be clicked once. In testing on
+2026-09-30 its submission endpoint was timing out and returning server errors, so
+Web3Forms is the more dependable choice.
+
+### How to test
+
+Open the live site, fill in the form with test details, and press "Send Booking Request".
+
+- A green "Thanks!" message means the service accepted it. The email should arrive within
+  a minute. Check the spam folder the first time.
+- A red "Sorry, something went wrong" message means the service rejected it or did not
+  answer within 20 seconds. The message tells the student to call or email instead.
+
+To change the destination address, edit `bookingEmail` in `CONFIG` in `script.js`
+(and create a new Web3Forms key for the new address).
 
 ## Running locally
 
