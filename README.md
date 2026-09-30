@@ -41,21 +41,14 @@ Once Public Star has its own Google Business Profile, put its reviews link in
 Booking requests are emailed to `publicstardrivingschool@gmail.com`. The site has no
 server, so a free form-to-email service does the sending.
 
-### Recommended: Web3Forms (one-time, about 2 minutes)
+### Web3Forms (active)
 
-1. Go to https://web3forms.com and enter `publicstardrivingschool@gmail.com` under
-   "Create your Access Key". No account or password is needed.
-2. Open the email Web3Forms sends to that inbox and copy the access key.
-3. Paste it into `web3formsKey` in `CONFIG` at the top of `script.js`, then commit and push.
+The form sends through Web3Forms, using the access key in `web3formsKey` in `CONFIG` at the
+top of `script.js`. The key is tied to `publicstardrivingschool@gmail.com` and is meant to be
+public. The free plan covers 250 bookings a month. Tested successfully on 2026-09-30.
 
-The free plan covers 250 bookings a month.
-
-### Fallback: FormSubmit
-
-While `web3formsKey` is empty, the form uses FormSubmit instead. FormSubmit sends an
-activation email on the first submission, and that link must be clicked once. In testing on
-2026-09-30 its submission endpoint was timing out and returning server errors, so
-Web3Forms is the more dependable choice.
+If `web3formsKey` is ever cleared, the form falls back to FormSubmit, which was unreliable
+in testing.
 
 ### How to test
 
