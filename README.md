@@ -23,7 +23,17 @@ all generated from it, so you only change numbers in one place.
 - `g2` — G2 hourly lessons and hours + road test bundles
 - `g` — G hourly lessons and hours + road test bundles
 
-Prices are entered **before HST**; the "with HST" totals are calculated automatically.
+Prices are entered **before HST**. Every price on the site shows "+ HST" and the 13% HST total, calculated automatically.
+
+## Reviews
+
+The Reviews section is hidden until you add entries to the `REVIEWS` list near the top of
+`script.js`. Each entry has a name, a 1 to 5 rating, the review text, where it was posted,
+and an optional date. There is a commented example in the file.
+
+Only add reviews written for Public Star, or ones the student has agreed to let you reuse.
+Once Public Star has its own Google Business Profile, put its reviews link in
+`REVIEWS_CONFIG.googleReviewsUrl` to show a "Read more reviews on Google" button.
 
 ## Booking form
 
@@ -33,6 +43,10 @@ email to `publicstardrivingschool@gmail.com`. No server or account is needed.
 **One-time activation:** the first time the form is submitted, FormSubmit sends an
 activation email to that Gmail inbox. Click the link once and all future submissions
 are delivered automatically. Until that is done, submissions are held.
+
+**How to test:** open the live site, fill in the form with test details, and submit.
+Within a minute an email should arrive at the booking inbox. Check the spam folder the
+first time. If the site moves to a new domain, FormSubmit may ask to activate once more.
 
 To change the destination address, edit `bookingEmail` in `CONFIG` in `script.js`.
 

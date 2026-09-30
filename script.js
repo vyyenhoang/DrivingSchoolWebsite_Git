@@ -74,11 +74,37 @@ const PRICING = {
   ],
 };
 
+/* Reviews -----------------------------------------------------------------
+   The Reviews section stays hidden until this list has at least one entry.
+   Only add reviews written for Public Star, or ones the student has agreed
+   to let you reuse. Set `source` to where the review was first posted.
+
+   Example entry:
+   {
+     name: "Priya S.",
+     rating: 5,
+     text: "Omaid was patient and explained every manoeuvre clearly. Passed my G2 first try!",
+     source: "Google",
+     date: "2026-09",
+   },
+*/
+const REVIEWS = [];
+
+const REVIEWS_CONFIG = {
+  // Line shown under the heading, e.g. "Rated 5.0 by our students on Google"
+  subtitle: "",
+  // Link to your Google Business Profile reviews, once it exists
+  googleReviewsUrl: "",
+};
+
 /* Helpers ------------------------------------------------------------------ */
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 const money = (n) => "$" + n.toLocaleString("en-CA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const withTax = (n) => Math.round(n * (1 + CONFIG.hst) * 100) / 100;
+// One label used by the cards, tables and booking dropdown so they always match
+const pkgLabel = (prefix, label, price) =>
+  `${prefix} ${label} – $${price} + HST (${money(withTax(price))} total)`;
 
 /* Render BDE cards --------------------------------------------------------- */
 function renderBdeCards() {
@@ -93,10 +119,10 @@ function renderBdeCards() {
         <p class="card-tagline">${p.tagline}</p>
         <div class="card-price">
           <span class="amount">$${p.price}</span><span class="tax">+ HST</span>
-          <span class="total">${money(withTax(p.price))} total</span>
+          <span class="total">${money(withTax(p.price))} total incl. HST</span>
         </div>
         <ul class="checklist">${p.features.map((f) => `<li>${f}</li>`).join("")}</ul>
-        <a href="#book" class="btn ${p.featured ? "btn-primary" : "btn-outline"} btn-block" data-select-package="BDE ${p.name} – $${p.price} + HST">Choose ${p.name}</a>
+        <a href="#book" class="btn ${p.featured ? "btn-primary" : "btn-outline"} btn-block" data-select-package="${pkgLabel("BDE", p.name, p.price)}">Choose ${p.name}</a>
       </article>`
     )
     .join("");
@@ -108,7 +134,7 @@ function renderTable(id, rows, prefix) {
   if (!table) return;
   table.innerHTML = `
     <thead>
-      <tr><th>Option</th><th>Price</th><th>With HST</th><th></th></tr>
+      <tr><th>Option</th><th>Price</th><th>Total (incl. HST)</th><th></th></tr>
     </thead>
     <tbody>
       ${rows
@@ -116,9 +142,9 @@ function renderTable(id, rows, prefix) {
           (r) => `
         <tr>
           <td class="label">${r.label}${r.popular ? '<span class="pill">Popular</span>' : ""}</td>
-          <td class="price">${money(r.price)}</td>
-          <td class="total"><span class="total-label">With HST </span>${money(withTax(r.price))}</td>
-          <td class="action"><a href="#book" data-select-package="${prefix} ${r.label} – $${r.price} + HST">Book →</a></td>
+          <td class="price">${money(r.price)} <span class="hst">+ HST</span></td>
+          <td class="total"><span class="total-label">Total </span>${money(withTax(r.price))}<span class="total-label"> incl. HST</span></td>
+          <td class="action"><a href="#book" data-select-package="${pkgLabel(prefix, r.label, r.price)}">Book →</a></td>
         </tr>`
         )
         .join("")}
@@ -139,9 +165,9 @@ function populatePackageSelect() {
     });
     sel.appendChild(og);
   };
-  group("Full BDE Course", PRICING.bde.map((p) => `BDE ${p.name} – $${p.price} + HST`));
-  group("G2 Lessons & Road Test", PRICING.g2.map((r) => `G2 ${r.label} – $${r.price} + HST`));
-  group("G Lessons & Road Test", PRICING.g.map((r) => `G ${r.label} – $${r.price} + HST`));
+  group("Full BDE Course", PRICING.bde.map((p) => pkgLabel("BDE", p.name, p.price)));
+  group("G2 Lessons & Road Test", PRICING.g2.map((r) => pkgLabel("G2", r.label, r.price)));
+  group("G Lessons & Road Test", PRICING.g.map((r) => pkgLabel("G", r.label, r.price)));
   const other = document.createElement("option");
   other.textContent = "Not sure yet – please advise";
   sel.appendChild(other);
@@ -286,6 +312,31 @@ function initForm() {
   });
 }
 
+/* Render reviews ----------------------------------------------------------- */
+function renderReviews() {
+  const section = $("#reviews");
+  if (!section || !REVIEWS.length) return;
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const stars = (n) => "★".repeat(Math.round(n)) + "☆".repeat(5 - Math.round(n));
+  $("#reviews-list").innerHTML = REVIEWS.map(
+    (r) => `
+      <figure class="review">
+        <div class="review-stars" aria-label="${r.rating} out of 5 stars">${stars(r.rating)}</div>
+        <blockquote>${esc(r.text)}</blockquote>
+        <figcaption>
+          <span class="review-avatar" aria-hidden="true">${esc(r.name.charAt(0))}</span>
+          <span><strong>${esc(r.name)}</strong>${r.source ? `<small>via ${esc(r.source)}${r.date ? " · " + esc(r.date) : ""}</small>` : ""}</span>
+        </figcaption>
+      </figure>`
+  ).join("");
+  if (REVIEWS_CONFIG.subtitle) $("#reviews-sub").textContent = REVIEWS_CONFIG.subtitle;
+  if (REVIEWS_CONFIG.googleReviewsUrl) {
+    $("#reviews-link").href = REVIEWS_CONFIG.googleReviewsUrl;
+    $("#reviews-cta").hidden = false;
+  }
+  section.hidden = false;
+}
+
 /* Mobile sticky CTA: hide while the booking form is on screen ------------- */
 function initStickyCta() {
   const bar = $("#sticky-cta");
@@ -299,6 +350,7 @@ function initStickyCta() {
 
 /* Init --------------------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
+  renderReviews();
   initStickyCta();
   renderBdeCards();
   renderTable("#g2-table", PRICING.g2, "G2");

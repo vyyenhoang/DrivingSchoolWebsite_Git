@@ -159,6 +159,8 @@ p { margin: 0 0 1em; }
 .price-badge-label { color: var(--muted); font-weight: 600; width: 100%; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; }
 .price-badge-amount { font-size: 3rem; font-weight: 800; color: var(--navy); line-height: 1; }
 .price-badge-unit { color: var(--muted); font-weight: 600; }
+.price-badge-total { width: 100%; color: var(--navy); font-weight: 700; font-size: 0.95rem; }
+.price-table .hst { color: var(--muted); font-weight: 600; font-size: 0.8em; }
 
 .checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .checklist li { padding-left: 30px; position: relative; }
@@ -247,6 +249,16 @@ p { margin: 0 0 1em; }
 .feature { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
 .feature-icon { font-size: 1.8rem; margin-bottom: 12px; }
 .feature p { color: var(--muted); margin: 0; font-size: 0.95rem; }
+
+/* Reviews ------------------------------------------------------------------ */
+.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.review { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; }
+.review-stars { color: var(--gold); letter-spacing: 2px; font-size: 1.1rem; margin-bottom: 12px; }
+.review blockquote { margin: 0 0 20px; color: var(--ink); flex: 1; }
+.review figcaption { display: flex; align-items: center; gap: 12px; }
+.review figcaption small { display: block; color: var(--muted); font-size: 0.8rem; }
+.review-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--gold); display: grid; place-items: center; font-weight: 800; flex-shrink: 0; }
+.reviews-cta { text-align: center; margin: 32px 0 0; }
 
 /* Areas -------------------------------------------------------------------- */
 .areas-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
@@ -353,7 +365,7 @@ span.flatpickr-weekday { color: var(--muted); font-weight: 700; font-size: 0.72r
 /* Responsive --------------------------------------------------------------- */
 @media (max-width: 960px) {
   .hero-grid, .areas-grid, .booking-grid { grid-template-columns: 1fr; gap: 36px; }
-  .cards, .features { grid-template-columns: 1fr 1fr; }
+  .cards, .features, .reviews { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid div:nth-child(2) { border-right: 0; }
@@ -412,7 +424,8 @@ span.flatpickr-weekday { color: var(--muted); font-weight: 700; font-size: 0.72r
   .panel-intro { font-size: 0.95rem; margin-bottom: 22px; }
 
   /* Package cards */
-  .cards, .features, .form-row, .footer-grid { grid-template-columns: 1fr; }
+  .cards, .features, .reviews, .form-row, .footer-grid { grid-template-columns: 1fr; }
+  .review { padding: 22px 20px; }
   .cards { gap: 18px; }
   .card { padding: 26px 20px; }
   .card.is-featured { order: -1; }
