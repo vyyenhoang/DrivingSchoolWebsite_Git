@@ -102,7 +102,8 @@ p { margin: 0 0 1em; }
 .brand-light { color: #fff; }
 .brand-light .brand-text span { color: var(--gold); }
 
-.nav { display: flex; align-items: center; gap: 28px; font-weight: 600; font-size: 0.95rem; }
+.nav { display: flex; align-items: center; gap: 24px; font-weight: 600; font-size: 0.95rem; }
+.nav a, .brand { white-space: nowrap; }
 .nav a:not(.btn):hover { color: var(--gold-600); }
 .nav-phone { color: var(--navy); font-weight: 800; }
 
@@ -259,6 +260,19 @@ p { margin: 0 0 1em; }
 .review figcaption small { display: block; color: var(--muted); font-size: 0.8rem; }
 .review-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--gold); display: grid; place-items: center; font-weight: 800; flex-shrink: 0; }
 .reviews-cta { text-align: center; margin: 32px 0 0; }
+.reviews:empty { display: none; }
+.reviews-empty {
+  max-width: 620px; margin: 0 auto; text-align: center;
+  background: var(--bg-alt); border: 1px dashed #cfd5e0; border-radius: 20px;
+  padding: 40px 32px;
+}
+.reviews-empty[hidden] { display: none; }
+.reviews-empty-icon {
+  width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--navy); color: var(--gold);
+}
+.reviews-empty h3 { font-size: 1.3rem; }
+.reviews-empty p { color: var(--muted); margin-bottom: 22px; }
 
 /* Areas -------------------------------------------------------------------- */
 .areas-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
@@ -362,6 +376,27 @@ span.flatpickr-weekday { color: var(--muted); font-weight: 700; font-size: 0.72r
 /* Sticky mobile CTA (hidden on desktop) ------------------------------------ */
 .sticky-cta { display: none; }
 
+/* Collapsed menu for tablets and phones -------------------------------------- */
+@media (max-width: 1024px) {
+  .nav-toggle { display: flex; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 16px 20px;
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+  .nav.is-open { display: flex; }
+  .nav a:not(.btn) { padding: 14px 4px; border-bottom: 1px solid var(--line); }
+  .nav-phone::before { content: "📞 "; }
+  .nav .btn { margin-top: 14px; padding: 14px; }
+}
+
 /* Responsive --------------------------------------------------------------- */
 @media (max-width: 960px) {
   .hero-grid, .areas-grid, .booking-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -384,23 +419,6 @@ span.flatpickr-weekday { color: var(--muted); font-weight: 700; font-size: 0.72r
   /* Header + nav */
   .nav-wrap { height: 64px; }
   .brand { font-size: 1.05rem; }
-  .nav-toggle { display: flex; }
-  .nav {
-    display: none;
-    position: absolute;
-    top: 64px; left: 0; right: 0;
-    background: #fff;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 8px 16px 20px;
-    border-bottom: 1px solid var(--line);
-    box-shadow: var(--shadow);
-  }
-  .nav.is-open { display: flex; }
-  .nav a:not(.btn) { padding: 14px 4px; border-bottom: 1px solid var(--line); }
-  .nav-phone::before { content: "📞 "; }
-  .nav .btn { margin-top: 14px; padding: 14px; }
 
   /* Hero */
   .hero { padding: 36px 0 40px; }
@@ -426,6 +444,8 @@ span.flatpickr-weekday { color: var(--muted); font-weight: 700; font-size: 0.72r
   /* Package cards */
   .cards, .features, .reviews, .form-row, .footer-grid { grid-template-columns: 1fr; }
   .review { padding: 22px 20px; }
+  .reviews-empty { padding: 30px 20px; }
+  .reviews-empty .btn { width: 100%; }
   .cards { gap: 18px; }
   .card { padding: 26px 20px; }
   .card.is-featured { order: -1; }

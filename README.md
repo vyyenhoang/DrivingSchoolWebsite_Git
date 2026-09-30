@@ -27,7 +27,8 @@ Prices are entered **before HST**. Every price on the site shows "+ HST" and the
 
 ## Reviews
 
-The Reviews section is hidden until you add entries to the `REVIEWS` list near the top of
+The Reviews section always shows. While the `REVIEWS` list near the top of `script.js` is
+empty, it shows a "Leave a review" message. Add entries to the list near the top of
 `script.js`. Each entry has a name, a 1 to 5 rating, the review text, where it was posted,
 and an optional date. There is a commented example in the file.
 

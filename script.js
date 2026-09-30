@@ -78,7 +78,8 @@ const PRICING = {
 };
 
 /* Reviews -----------------------------------------------------------------
-   The Reviews section stays hidden until this list has at least one entry.
+   While this list is empty, the Reviews section shows a "Leave a review" message.
+   Add entries and it switches to review cards automatically.
    Only add reviews written for Public Star, or ones the student has agreed
    to let you reuse. Set `source` to where the review was first posted.
 
@@ -341,7 +342,16 @@ function initForm() {
 /* Render reviews ----------------------------------------------------------- */
 function renderReviews() {
   const section = $("#reviews");
-  if (!section || !REVIEWS.length) return;
+  if (!section) return;
+  // With a Google profile, "Leave a review" goes there instead of email
+  if (REVIEWS_CONFIG.googleReviewsUrl) {
+    const leave = $("#reviews-leave");
+    leave.href = REVIEWS_CONFIG.googleReviewsUrl;
+    leave.target = "_blank";
+    leave.rel = "noopener";
+  }
+  if (!REVIEWS.length) return; // keep the empty state
+  $("#reviews-empty").hidden = true;
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const stars = (n) => "★".repeat(Math.round(n)) + "☆".repeat(5 - Math.round(n));
   $("#reviews-list").innerHTML = REVIEWS.map(
@@ -360,7 +370,6 @@ function renderReviews() {
     $("#reviews-link").href = REVIEWS_CONFIG.googleReviewsUrl;
     $("#reviews-cta").hidden = false;
   }
-  section.hidden = false;
 }
 
 /* Mobile sticky CTA: hide while the booking form is on screen ------------- */
