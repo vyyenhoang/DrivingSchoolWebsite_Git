@@ -256,6 +256,25 @@ p { margin: 0 0 1em; }
 .review { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; }
 .review-stars { color: var(--gold); letter-spacing: 2px; font-size: 1.1rem; margin-bottom: 12px; }
 .review blockquote { margin: 0 0 20px; color: var(--ink); flex: 1; }
+.review blockquote p { margin: 0 0 0.75em; }
+.review blockquote p:last-child { margin-bottom: 0; }
+.review blockquote.is-clamped {
+  flex: 0 0 auto;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; line-clamp: 6;
+  overflow: hidden;
+}
+.review blockquote.is-clamped p { display: inline; }
+.review blockquote.is-clamped p + p::before { content: " "; }
+.review-more {
+  align-self: flex-start; margin: -10px 0 20px; padding: 0;
+  background: none; border: 0; cursor: pointer; font: inherit;
+  font-weight: 700; font-size: 0.9rem; color: var(--navy-500);
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.review-more:hover { color: var(--gold-600); }
+.review figcaption { margin-top: auto; }
+.reviews.is-collapsed .is-extra { display: none; }
+.reviews-more-wrap { text-align: center; margin: 32px 0 0; }
 .review figcaption { display: flex; align-items: center; gap: 12px; }
 .review figcaption small { display: block; color: var(--muted); font-size: 0.8rem; }
 .review-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--gold); display: grid; place-items: center; font-weight: 800; flex-shrink: 0; }

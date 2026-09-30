@@ -92,11 +92,106 @@ const PRICING = {
      date: "2026-09",
    },
 */
-const REVIEWS = [];
+const REVIEWS = [
+  {
+    name: "Nathan S.",
+    rating: 5,
+    text: "I had an excellent experience learning to drive with Omaid Faizi. He is a very patient, professional, and knowledgeable instructor who made every lesson comfortable and productive. He explains concepts clearly, gives helpful feedback, and focuses on building confidence rather than just teaching you how to pass the test.\n\nOmaid was always encouraging and took the time to correct my mistakes while helping me develop better driving habits and awareness on the road. Thanks to his guidance, I felt much more prepared and confident behind the wheel.\n\nI highly recommend Omaid Faizi to anyone looking for a driving instructor who genuinely cares about their students’ success.",
+    source: "Google",
+  },
+  {
+    name: "April R.",
+    rating: 5,
+    text: "I passed my G2 with confidence thanks to my instructor, Omaid Faizi. He is an excellent teacher who explains everything clearly while also giving you the confidence you need, especially when you’re feeling nervous. It was my first time driving with him, and I had no prior driving experience, but with his patience, knowledge, and guidance, I passed my test on the first attempt. He truly knows how to support and motivate his students. May Allah bless him. I would 10000% recommend him to anyone looking for a driving instructor.",
+    source: "Google",
+  },
+  {
+    name: "Chevron",
+    rating: 5,
+    text: "My Instructor Omaid Faizi was excellent! He was so helpful throughout my lessons and his teaching style allows for effective learning. I could tell that he really cares about his students' growth and success. Thanks to him, I was able to pass my G2 test on the first try!",
+    source: "Google",
+  },
+  {
+    name: "Yeasir C.",
+    rating: 5,
+    text: "Omaid Faizi is a very skilled and knowledgeable driving instructor. He shared many valuable defensive driving skills with me in a short period of time, and by the will of Almighty Allah, I passed my road test with ease. I am truly grateful to Almighty Allah for giving me the opportunity to practice driving according to Ontario’s road rules under the guidance of such a dedicated instructor. May Allah bless Omaid Faizi abundantly.",
+    source: "Google",
+  },
+  {
+    name: "Hryhorii O.",
+    rating: 5,
+    text: "I’ve had an absolutely amazing experience with this school and was able to pass my G2 test with a first attempt! Omaid Faizi was an amazing instructor who patiently taught me how to drive and corrected all my mistakes really fast - resulting in me getting a license. Highly recommend this instructor and a driving school!",
+    source: "Google",
+  },
+  {
+    name: "Rafiullah S.",
+    rating: 5,
+    text: "I highly recommend this driving school for anyone preparing for their G license. I had the pleasure of learning from Omaid Faizi, who is an outstanding instructor. His clear explanations, patience, and focus on safe driving techniques made a significant difference in my confidence and skills behind the wheel. Omaid Faizi ensured that I was well-prepared for every part of the test, and thanks to his thorough instruction, I successfully passed my G test on the first attempt. If you’re looking for a knowledgeable and supportive driving instructor, Omaid Faizi is an excellent choice.",
+    source: "Google",
+  },
+  {
+    name: "Tariq Z.",
+    rating: 5,
+    text: "I greatly recommend this driving school to anyone in the Greater Toronto Area who is looking to become a confident and skilled driver. I had the pleasure of being instructed by Omaid Faizi, who was not only knowledgeable and professional but also incredibly patient and supportive throughout the learning process. Thanks to his expert guidance and clear instruction, I was able to pass my G test on the first attempt. His teaching methods and focus on safety made a significant difference in my driving experience. I’m truly grateful for his help and would encourage anyone seeking a reliable driving instructor to reach out to him.",
+    source: "Google",
+  },
+  {
+    name: "Najeeb Y.",
+    rating: 5,
+    text: "⭐️⭐️⭐️⭐️⭐️I Passed My G Test – Thanks to Omaid Faizi!\n\nI had an amazing experience with All Star Driving School, and I can’t thank my instructor Omaid Faizi enough for his incredible guidance and support. He is extremely knowledgeable, patient, and calm — exactly what every student driver needs.\n\nOmaid made every lesson enjoyable and stress-free, always explaining things clearly and helping me feel confident behind the wheel. He pointed out the small details that make a big difference on the test and gave me helpful tips I never would have learned on my own.\n\nThanks to his excellent instruction and encouragement, I passed my G test on the first try! If you’re looking for a top-notch instructor who truly cares about your success, ask for Omaid Faizi. Highly recommend!",
+    source: "Google",
+  },
+  {
+    name: "Gabriel L.",
+    rating: 5,
+    text: "Review for a job well done with instructor Omaid Faizi for the G2, which I passed on the first try. When I started with him, I had never touched a steering wheel, but with calm and consistent guidance, as well as useful tips for parking, I was able to pass the test with high marks!",
+    source: "Google",
+  },
+  {
+    name: "Chiara C.",
+    rating: 5,
+    text: "Great driving school! 10/10 would recommend to any new drivers. Omaid Faizi is a great driving teacher, accommodating, professional and knowledgeable. With his teaching, I passed my G2 in one go with only a couple lessons!",
+    source: "Google",
+  },
+  {
+    name: "Leo W.",
+    rating: 5,
+    text: "My instructor Omaid Faizi was very helpful, informative and patient. He taught me everything I need to know when it comes to the rules of the road and driving. I was able to pass my test on the first try as a result of this.",
+    source: "Google",
+  },
+  {
+    name: "Niki V.",
+    rating: 5,
+    text: "I would like give this review to Omaid Faizi. Thank you for patiently teaching me in these last 8 classes for G2 test. Throughout the classes Omaid gave great tips and tricks. He was knowledgeable and kind. Thank you. My test is next month, wish me all the best.\n\nEdit: I also went and did my G test at Downsview this week and passed on first attempt. Thanks to Omaid again for helping and guiding me throughout. Highly recommend.",
+    source: "Google",
+  },
+  {
+    name: "Tamanna H.",
+    rating: 5,
+    text: "\"Omaid faizi is an exceptional driving instructor! They're knowledgeable, patient, and made learning to drive a positive experience. Their teaching style is clear and effective, pass my g2 on first attempt . I highly recommend Omaid to anyone looking to become a confident driver.",
+    source: "Google",
+  },
+  {
+    name: "William S.",
+    rating: 5,
+    text: "Omaid Faizi was a great instructor. He was very patient and taught me well.",
+    source: "Google",
+  },
+  {
+    name: "Ahmed K.",
+    rating: 5,
+    text: "Hey Omaid faizi, passed my G2 under your supervision and lessons you thought me was really helpful and meaningful . I admire your professionalism and patience.",
+    source: "Google",
+  },
+];
 
 const REVIEWS_CONFIG = {
-  // Line shown under the heading, e.g. "Rated 5.0 by our students on Google"
-  subtitle: "",
+  heading: "What students say about Omaid",
+  // Keep this line: the reviews above were written while Omaid taught at another school
+  subtitle:
+    "Reviews from students taught by our instructor Omaid Faizi, posted on Google while he taught at his previous driving school.",
+  // How many cards show before the "Show all reviews" button
+  initialCount: 6,
   // Link to your Google Business Profile reviews, once it exists
   googleReviewsUrl: "",
 };
@@ -354,17 +449,48 @@ function renderReviews() {
   $("#reviews-empty").hidden = true;
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const stars = (n) => "★".repeat(Math.round(n)) + "☆".repeat(5 - Math.round(n));
-  $("#reviews-list").innerHTML = REVIEWS.map(
-    (r) => `
-      <figure class="review">
+  const LONG = 300; // characters before "Read more"
+  const limit = REVIEWS_CONFIG.initialCount || REVIEWS.length;
+  const list = $("#reviews-list");
+  list.innerHTML = REVIEWS.map(
+    (r, i) => `
+      <figure class="review${i >= limit ? " is-extra" : ""}">
         <div class="review-stars" aria-label="${r.rating} out of 5 stars">${stars(r.rating)}</div>
-        <blockquote>${esc(r.text)}</blockquote>
+        <blockquote class="${r.text.length > LONG ? "is-clamped" : ""}">
+          ${r.text.split(/\n\n+/).map((p) => `<p>${esc(p)}</p>`).join("")}
+        </blockquote>
+        ${r.text.length > LONG ? '<button type="button" class="review-more" aria-expanded="false">Read more</button>' : ""}
         <figcaption>
           <span class="review-avatar" aria-hidden="true">${esc(r.name.charAt(0))}</span>
           <span><strong>${esc(r.name)}</strong>${r.source ? `<small>via ${esc(r.source)}${r.date ? " · " + esc(r.date) : ""}</small>` : ""}</span>
         </figcaption>
       </figure>`
   ).join("");
+
+  // "Read more" on long reviews
+  list.addEventListener("click", (e) => {
+    const btn = e.target.closest(".review-more");
+    if (!btn) return;
+    const quote = btn.previousElementSibling;
+    const open = quote.classList.toggle("is-clamped") === false;
+    btn.textContent = open ? "Show less" : "Read more";
+    btn.setAttribute("aria-expanded", String(open));
+  });
+
+  // "Show all reviews" when there are more than the initial count
+  if (REVIEWS.length > limit) {
+    list.classList.add("is-collapsed");
+    const more = document.createElement("p");
+    more.className = "reviews-more-wrap";
+    more.innerHTML = `<button type="button" class="btn btn-outline">Show all ${REVIEWS.length} reviews</button>`;
+    list.after(more);
+    more.querySelector("button").addEventListener("click", () => {
+      list.classList.remove("is-collapsed");
+      more.remove();
+    });
+  }
+
+  if (REVIEWS_CONFIG.heading) $("#reviews h2").textContent = REVIEWS_CONFIG.heading;
   if (REVIEWS_CONFIG.subtitle) $("#reviews-sub").textContent = REVIEWS_CONFIG.subtitle;
   if (REVIEWS_CONFIG.googleReviewsUrl) {
     $("#reviews-link").href = REVIEWS_CONFIG.googleReviewsUrl;
