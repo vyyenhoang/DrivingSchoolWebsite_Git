@@ -9,7 +9,7 @@ const CONFIG = {
   phoneTel: "+14377774494",
   // Booking emails: paste a free Web3Forms access key here (see README) for reliable
   // delivery. Left empty, the form falls back to FormSubmit.
-  web3formsKey: "",
+  web3formsKey: "d1e0b834-c710-4da8-bdaa-271e9656a72f",
   hst: 0.13,
 };
 
