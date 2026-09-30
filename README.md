@@ -12,6 +12,7 @@ serving Scarborough, North York, Pickering, Ajax, Whitby and Oshawa.
 | `index.html` | The whole site (hero, packages, why us, service areas, booking form, FAQ, footer) |
 | `styles.css` | All styling, mobile-responsive |
 | `script.js` | Pricing data, package tables, tabs, mobile nav, booking form submission |
+| `assets/` | Logo files: full logo, star emblem (green and light versions), browser icons, link-preview image |
 
 ## Editing prices and packages
 

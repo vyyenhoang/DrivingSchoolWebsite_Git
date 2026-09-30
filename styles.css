@@ -98,12 +98,13 @@ p { margin: 0 0 1em; }
   border-bottom: 1px solid var(--line);
 }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.brand { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.15rem; color: var(--navy); }
-.brand-star { color: var(--accent); font-size: 1.5rem; line-height: 1; }
-.brand-text span { color: var(--accent); }
-.brand-light { color: #fff; }
-.brand-light .brand-text span { color: var(--accent-light); }
-.brand-light .brand-star { color: var(--accent-light); }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--accent); }
+.brand-mark { height: 46px; width: auto; flex-shrink: 0; }
+.brand-text { display: flex; flex-direction: column; font-family: "Montserrat", "Inter", sans-serif; line-height: 1; }
+.brand-text strong { font-weight: 800; font-size: 1.28rem; letter-spacing: 0.01em; color: var(--accent); }
+.brand-text small { font-weight: 600; font-size: 0.6rem; letter-spacing: 0.32em; color: #55595f; margin-top: 5px; }
+.brand-light .brand-text strong { color: #fff; }
+.brand-light .brand-text small { color: var(--accent-light); }
 
 .nav { display: flex; align-items: center; gap: 24px; font-weight: 600; font-size: 0.95rem; }
 .nav a, .brand { white-space: nowrap; }
@@ -440,7 +441,9 @@ span.flatpickr-weekday { color: var(--muted); font-weight: 700; font-size: 0.72r
 
   /* Header + nav */
   .nav-wrap { height: 64px; }
-  .brand { font-size: 1.05rem; }
+  .brand-mark { height: 40px; }
+  .brand-text strong { font-size: 1.12rem; }
+  .brand-text small { font-size: 0.54rem; letter-spacing: 0.28em; }
 
   /* Hero */
   .hero { padding: 36px 0 40px; }
