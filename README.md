@@ -1,6 +1,6 @@
 # Public Star Driving School — Website
 
-**Live site:** https://vyyenhoang.github.io/DrivingSchoolWebsite_Git/
+**Live site:** https://publicstardrivingschool.com/
 
 Static marketing site with an online booking form for Public Star Driving School,
 serving Scarborough, North York, Pickering, Ajax, Whitby and Oshawa.
@@ -95,7 +95,25 @@ Then visit http://localhost:8765.
 ## Deploying
 
 The site is deployed automatically to GitHub Pages from the `main` branch: every push
-to `main` updates https://vyyenhoang.github.io/DrivingSchoolWebsite_Git/ within a minute.
+to `main` updates https://publicstardrivingschool.com/ within a minute.
+
+### Custom domain
+
+The domain `publicstardrivingschool.com` is registered at Namecheap and points to GitHub
+Pages. The `CNAME` file in this repo tells GitHub which domain to serve. The old address
+https://vyyenhoang.github.io/DrivingSchoolWebsite_Git/ redirects to the domain.
+
+DNS records in Namecheap (Domain List > Manage > Advanced DNS):
+
+| Type | Host | Value |
+| --- | --- | --- |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | vyyenhoang.github.io. |
+
+HTTPS is issued by GitHub automatically once DNS points here.
 
 It is plain HTML/CSS/JS with no build step, so it can also be uploaded to any static
 host (GitHub Pages, Netlify, Vercel, cPanel, etc.).
