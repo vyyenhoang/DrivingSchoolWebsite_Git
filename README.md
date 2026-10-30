@@ -11,7 +11,7 @@ serving Scarborough, North York, Pickering, Ajax, Whitby and Oshawa.
 | --- | --- |
 | `index.html` | The whole site (hero, packages, why us, service areas, booking form, FAQ, footer) |
 | `styles.css` | All styling, mobile-responsive |
-| `script.js` | Pricing data, package tables, tabs, mobile nav, booking form submission |
+| `script.js` | Pricing data and payment links, package tables, tabs, mobile nav, booking form submission |
 | `google-apps-script/` | Script that emails bookings from the business Gmail and logs them to a Google Sheet |
 | `assets/` | Logo files: full logo, star emblem (green and light versions), browser icons, link-preview image |
 
@@ -81,6 +81,84 @@ Open the live site, fill in the form with test details, and press "Send Booking 
   a minute. The first time, check the spam folder.
 - A red "Sorry, something went wrong" message means the service rejected it or did not
   answer within 20 seconds. The message tells the student to call or email instead.
+
+## Online payments
+
+The site has no server, so card payments go through a payment provider's hosted checkout
+page. Each package gets its own payment link. When a link is filled in, the site shows:
+
+- a **Pay online** button on that package's card or table row
+- a **Pay now** button after a student sends a booking for that package (optional for them)
+- a line under the packages and an updated "How do I pay?" FAQ answer
+
+Packages without a link show no Pay button, so links can be added one at a time.
+
+### Which provider
+
+Either works with the site. Online card fees are similar, about 2.8 to 2.9% + 30¢ per payment,
+with no monthly fee.
+
+- **Square (recommended):** the same free account also lets instructors take tap payments in
+  the car with a phone (Tap to Pay) or a Square Reader. Payment links are under
+  **Online > Payment links** (or **Payments > Payment links**).
+- **Stripe:** very simple payment links. The site also prefills the student's email on
+  Stripe checkout pages.
+
+### Setting up (Square)
+
+1. Create a free account at https://squareup.com/ca with the business details and the bank
+   account that should receive payouts. Square verifies the business before payouts start.
+2. Go to **Payment links > Create link**. Choose a fixed amount ("Collect a payment" or
+   "Sell an item").
+3. Use the item name and the **Price to charge** from the table below. The prices include
+   13% HST, so don't add tax on top in Square.
+4. In the link's settings, set the **redirect URL after payment** to
+   `https://publicstardrivingschool.com/?paid=1`. Students then come back to the site and
+   see a "Payment received" message.
+5. Copy the link (it starts with `https://square.link/` or `https://checkout.square.site/`)
+   into that package's `payLink` in `script.js`, then commit and push. Or send the links to
+   whoever maintains the site.
+
+### Setting up (Stripe)
+
+1. Create an account at https://dashboard.stripe.com/register and activate it with the
+   business and bank details.
+2. Go to **Payment Links > New**. Add a product with the item name and the **Price to
+   charge** from the table below, as a one-time price in CAD.
+3. Under **After payment**, choose **Don't show confirmation page** and redirect to
+   `https://publicstardrivingschool.com/?paid=1`.
+4. Create the link and copy it (it starts with `https://buy.stripe.com/`) into that
+   package's `payLink` in `script.js`, then commit and push.
+
+### Packages and prices
+
+| Item name to use | Price before HST | Price to charge (HST included) | Where the link goes in `script.js` |
+| --- | --- | --- | --- |
+| BDE Basic course | $499.00 | $563.87 | `PRICING.bde (Basic)` |
+| BDE Premium course | $649.00 | $733.37 | `PRICING.bde (Premium)` |
+| BDE Advanced course | $799.00 | $902.87 | `PRICING.bde (Advanced)` |
+| G2 1 hour lesson | $50.00 | $56.50 | `PRICING.g2 (1 hour lesson)` |
+| G2 2 hours + road test | $200.00 | $226.00 | `PRICING.g2 (2 hours + road test)` |
+| G2 3 hours + road test | $250.00 | $282.50 | `PRICING.g2 (3 hours + road test)` |
+| G2 4 hours + road test | $300.00 | $339.00 | `PRICING.g2 (4 hours + road test)` |
+| G2 5 hours + road test | $330.00 | $372.90 | `PRICING.g2 (5 hours + road test)` |
+| G2 10 hours + road test | $550.00 | $621.50 | `PRICING.g2 (10 hours + road test)` |
+| G 1 hour lesson | $60.00 | $67.80 | `PRICING.g (1 hour lesson)` |
+| G 2 hours + road test | $250.00 | $282.50 | `PRICING.g (2 hours + road test)` |
+| G 3 hours + road test | $300.00 | $339.00 | `PRICING.g (3 hours + road test)` |
+| G 4 hours + road test | $360.00 | $406.80 | `PRICING.g (4 hours + road test)` |
+| G 5 hours + road test | $400.00 | $452.00 | `PRICING.g (5 hours + road test)` |
+
+### Interac e-Transfer (optional)
+
+To also show e-Transfer as a payment option, set `etransferEmail` in `CONFIG` at the top of
+`script.js` to the email address that accepts e-Transfers. Leave it empty to hide it.
+
+### Matching payments to bookings
+
+Payments and booking requests arrive separately. The provider emails a receipt to the
+student and a payment notice to the business, with the student's name and email, so match
+them by name. Refunds are done from the provider's dashboard.
 
 ## Running locally
 

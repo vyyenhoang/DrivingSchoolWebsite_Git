@@ -14,12 +14,17 @@ const CONFIG = {
   web3formsKey: "d1e0b834-c710-4da8-bdaa-271e9656a72f",
   // 3. Neither set: FormSubmit to bookingEmail
   hst: 0.13,
+  // Online payments: put each package's checkout link in its payLink below (Square,
+  // Stripe or PayPal). Packages without a link simply show no Pay button.
+  // Interac e-Transfer address to show students, or "" to hide it
+  etransferEmail: "",
 };
 
 const PRICING = {
   bde: [
     {
       name: "Basic",
+      payLink: "", // checkout link for this package (see README > Online payments)
       price: 499,
       tagline: "Everything you need to earn your BDE certificate.",
       features: [
@@ -34,6 +39,7 @@ const PRICING = {
     },
     {
       name: "Premium",
+      payLink: "", // checkout link for this package (see README > Online payments)
       price: 649,
       featured: true,
       badge: "Most Popular",
@@ -48,6 +54,7 @@ const PRICING = {
     },
     {
       name: "Advanced",
+      payLink: "", // checkout link for this package (see README > Online payments)
       price: 799,
       tagline: "Maximum preparation for nervous or first-time drivers.",
       features: [
@@ -62,21 +69,21 @@ const PRICING = {
 
   // Individual G2 lessons and hours + road test bundles (before HST)
   g2: [
-    { label: "1 hour lesson", price: 50, roadTest: false },
-    { label: "2 hours + road test", price: 200, roadTest: true },
-    { label: "3 hours + road test", price: 250, roadTest: true },
-    { label: "4 hours + road test", price: 300, roadTest: true },
-    { label: "5 hours + road test", price: 330, roadTest: true, popular: true },
-    { label: "10 hours + road test", price: 550, roadTest: true },
+    { label: "1 hour lesson", price: 50, roadTest: false, payLink: "" },
+    { label: "2 hours + road test", price: 200, roadTest: true, payLink: "" },
+    { label: "3 hours + road test", price: 250, roadTest: true, payLink: "" },
+    { label: "4 hours + road test", price: 300, roadTest: true, payLink: "" },
+    { label: "5 hours + road test", price: 330, roadTest: true, popular: true, payLink: "" },
+    { label: "10 hours + road test", price: 550, roadTest: true, payLink: "" },
   ],
 
   // Individual G (full licence) lessons and bundles (before HST)
   g: [
-    { label: "1 hour lesson", price: 60, roadTest: false },
-    { label: "2 hours + road test", price: 250, roadTest: true },
-    { label: "3 hours + road test", price: 300, roadTest: true, popular: true },
-    { label: "4 hours + road test", price: 360, roadTest: true },
-    { label: "5 hours + road test", price: 400, roadTest: true },
+    { label: "1 hour lesson", price: 60, roadTest: false, payLink: "" },
+    { label: "2 hours + road test", price: 250, roadTest: true, payLink: "" },
+    { label: "3 hours + road test", price: 300, roadTest: true, popular: true, payLink: "" },
+    { label: "4 hours + road test", price: 360, roadTest: true, payLink: "" },
+    { label: "5 hours + road test", price: 400, roadTest: true, payLink: "" },
   ],
 };
 
@@ -208,6 +215,26 @@ const withTax = (n) => Math.round(n * (1 + CONFIG.hst) * 100) / 100;
 const pkgLabel = (prefix, label, price) =>
   `${prefix} ${label} – $${price} + HST (${money(withTax(price))} total)`;
 
+// Every package keyed by its booking label, so the form can find its payment link
+const allPackages = () => [
+  ...PRICING.bde.map((p) => ({ label: pkgLabel("BDE", p.name, p.price), price: p.price, payLink: p.payLink })),
+  ...PRICING.g2.map((r) => ({ label: pkgLabel("G2", r.label, r.price), price: r.price, payLink: r.payLink })),
+  ...PRICING.g.map((r) => ({ label: pkgLabel("G", r.label, r.price), price: r.price, payLink: r.payLink })),
+];
+// Only allow real https links; Stripe links can also prefill the student's email
+const payUrl = (link, email) => {
+  if (!link) return "";
+  try {
+    const u = new URL(link);
+    if (u.protocol !== "https:") return "";
+    if (email && u.hostname === "buy.stripe.com") u.searchParams.set("prefilled_email", email);
+    return u.toString();
+  } catch {
+    return "";
+  }
+};
+const LOCK = '<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 2a5 5 0 00-5 5v3H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-1V7a5 5 0 00-5-5zm-3 8V7a3 3 0 016 0v3H9z"/></svg>';
+
 /* Render BDE cards --------------------------------------------------------- */
 function renderBdeCards() {
   const wrap = $("#bde-cards");
@@ -225,6 +252,7 @@ function renderBdeCards() {
         </div>
         <ul class="checklist">${p.features.map((f) => `<li>${f}</li>`).join("")}</ul>
         <a href="#book" class="btn ${p.featured ? "btn-primary" : "btn-outline"} btn-block" data-select-package="${pkgLabel("BDE", p.name, p.price)}">Choose ${p.name}</a>
+        ${payUrl(p.payLink) ? `<a href="${payUrl(p.payLink)}" class="btn btn-pay btn-block" target="_blank" rel="noopener">${LOCK} Pay online · ${money(withTax(p.price))}</a>` : ""}
       </article>`
     )
     .join("");
@@ -246,7 +274,7 @@ function renderTable(id, rows, prefix) {
           <td class="label">${r.label}${r.popular ? '<span class="pill">Popular</span>' : ""}</td>
           <td class="price">${money(r.price)} <span class="hst">+ HST</span></td>
           <td class="total"><span class="total-label">Total </span>${money(withTax(r.price))}<span class="total-label"> incl. HST</span></td>
-          <td class="action"><a href="#book" data-select-package="${pkgLabel(prefix, r.label, r.price)}">Book →</a></td>
+          <td class="action"><a href="#book" data-select-package="${pkgLabel(prefix, r.label, r.price)}">Book →</a>${payUrl(r.payLink) ? `<a href="${payUrl(r.payLink)}" class="pay-link" target="_blank" rel="noopener">${LOCK} Pay</a>` : ""}</td>
         </tr>`
         )
         .join("")}
@@ -433,6 +461,7 @@ function initForm() {
       if ($("#date")._flatpickr) $("#date")._flatpickr.clear();
       status.className = "form-status ok";
       status.textContent = "Thanks! Your request has been sent. We'll confirm your lesson shortly.";
+      showPaymentOptions(status, fields.Package, fields.Email);
     } catch (err) {
       console.warn("Booking form error:", err);
       status.className = "form-status err";
@@ -443,6 +472,58 @@ function initForm() {
       btn.textContent = "Send Booking Request";
     }
   });
+}
+
+/* Payments ------------------------------------------------------------------ */
+// After a booking: offer to pay the chosen package now (optional)
+function showPaymentOptions(statusEl, packageLabel, email) {
+  const pkg = allPackages().find((p) => p.label === packageLabel);
+  const link = pkg && payUrl(pkg.payLink, email);
+  const parts = [];
+  if (link) {
+    parts.push(`<a href="${link}" class="btn btn-pay" target="_blank" rel="noopener">${LOCK} Pay ${money(withTax(pkg.price))} online now</a>`);
+  }
+  if (CONFIG.etransferEmail) {
+    parts.push(`<span>Or send an Interac e-Transfer to <strong>${CONFIG.etransferEmail}</strong>.</span>`);
+  }
+  if (!parts.length) return;
+  const box = document.createElement("div");
+  box.className = "pay-after";
+  box.innerHTML = `<p>Want to pay now? It's optional. You can also pay at your first lesson.</p>${parts.join("")}`;
+  statusEl.appendChild(box);
+}
+
+// Line under the packages and the FAQ answer, shown once payments are set up
+function initPaymentInfo() {
+  const online = allPackages().some((p) => payUrl(p.payLink));
+  const etransfer = Boolean(CONFIG.etransferEmail);
+  if (!online && !etransfer) return;
+  const ways = [];
+  if (online) ways.push("online by credit card, debit card, Apple Pay or Google Pay");
+  if (etransfer) ways.push(`by Interac e-Transfer to ${CONFIG.etransferEmail}`);
+  ways.push("in person at your first lesson");
+  const note = $("#pay-note");
+  if (note) {
+    note.innerHTML = `${LOCK} Pay ${ways.join(", or ")}.`;
+    note.hidden = false;
+  }
+  const faq = $("#faq-pay");
+  if (faq) {
+    faq.textContent = `You can pay ${ways.join(", or ")}. Online payments go through a secure checkout page and you get an emailed receipt. Booking requests don't need payment upfront.`;
+  }
+}
+
+// Students return here after paying (set this as the checkout's redirect URL)
+function initPaidBanner() {
+  const params = new URLSearchParams(location.search);
+  if (params.get("paid") !== "1") return;
+  const banner = document.createElement("div");
+  banner.className = "paid-banner";
+  banner.setAttribute("role", "status");
+  banner.innerHTML = `<div class="container"><strong>Payment received, thank you!</strong> Your receipt is on its way by email. We'll be in touch to confirm your lesson. <button type="button" aria-label="Close">×</button></div>`;
+  banner.querySelector("button").addEventListener("click", () => banner.remove());
+  $(".site-header").after(banner);
+  history.replaceState(null, "", location.pathname + location.hash);
 }
 
 /* Render reviews ----------------------------------------------------------- */
@@ -532,5 +613,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPackageLinks();
   initNav();
   initForm();
+  initPaymentInfo();
+  initPaidBanner();
   $("#year").textContent = new Date().getFullYear();
 });

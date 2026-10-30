@@ -550,3 +550,31 @@ span.flatpickr-weekday { color: var(--muted); font-weight: 700; font-size: 0.72r
   .area-list { grid-template-columns: 1fr; }
   .tab { font-size: 0.74rem; }
 }
+
+/* Online payments ---------------------------------------------------------- */
+.btn-pay { background: var(--green); color: #fff; gap: 8px; }
+.btn-pay:hover { background: var(--green-700); box-shadow: 0 8px 20px rgba(14, 59, 46, 0.30); }
+.card .btn-pay { margin-top: 10px; }
+.pay-link {
+  display: inline-flex; align-items: center; gap: 4px; margin-left: 12px;
+  color: var(--green-500); font-weight: 700;
+}
+.pay-note {
+  display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
+  text-align: center; color: var(--green); font-weight: 600; font-size: 0.92rem; margin: 6px 0 0;
+}
+.pay-note[hidden] { display: none; }
+.pay-after {
+  margin-top: 14px; padding: 16px; border-radius: 12px; background: var(--bg-alt);
+  border: 1px solid var(--line); color: var(--ink); font-weight: 500;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+}
+.pay-after p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.paid-banner { background: var(--gold); color: var(--green); }
+.paid-banner .container { display: flex; align-items: center; gap: 10px; padding: 14px 0; flex-wrap: wrap; }
+.paid-banner button { margin-left: auto; background: none; border: 0; font-size: 1.4rem; line-height: 1; cursor: pointer; color: var(--green); }
+@media (max-width: 720px) {
+  .price-table td.action { display: flex; justify-content: flex-end; align-items: center; gap: 6px; }
+  .pay-link { margin-left: 0; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--green-500); font-size: 0.85rem; }
+  .pay-after .btn-pay { width: 100%; }
+}
