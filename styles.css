@@ -578,3 +578,13 @@ span.flatpickr-weekday { color: var(--muted); font-weight: 700; font-size: 0.72r
   .pay-link { margin-left: 0; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--green-500); font-size: 0.85rem; }
   .pay-after .btn-pay { width: 100%; }
 }
+
+/* Interac e-Transfer instructions after a booking */
+.etransfer { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.etransfer small { flex-basis: 100%; color: var(--muted); }
+.copy-email {
+  font: inherit; font-size: 0.82rem; font-weight: 700; cursor: pointer;
+  padding: 5px 12px; border-radius: 999px; border: 1px solid var(--green-500);
+  background: #fff; color: var(--green);
+}
+.copy-email:hover { background: var(--green); color: #fff; }

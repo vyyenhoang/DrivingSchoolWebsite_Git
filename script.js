@@ -17,7 +17,7 @@ const CONFIG = {
   // Online payments: put each package's checkout link in its payLink below (Square,
   // Stripe or PayPal). Packages without a link simply show no Pay button.
   // Interac e-Transfer address to show students, or "" to hide it
-  etransferEmail: "",
+  etransferEmail: "publicstardrivingschool@gmail.com",
 };
 
 const PRICING = {
@@ -484,12 +484,28 @@ function showPaymentOptions(statusEl, packageLabel, email) {
     parts.push(`<a href="${link}" class="btn btn-pay" target="_blank" rel="noopener">${LOCK} Pay ${money(withTax(pkg.price))} online now</a>`);
   }
   if (CONFIG.etransferEmail) {
-    parts.push(`<span>Or send an Interac e-Transfer to <strong>${CONFIG.etransferEmail}</strong>.</span>`);
+    const amount = pkg ? `<strong>${money(withTax(pkg.price))}</strong>` : "your package total";
+    parts.push(`<div class="etransfer">
+      <span><strong>Interac e-Transfer:</strong> send ${amount} to <strong>${CONFIG.etransferEmail}</strong></span>
+      <button type="button" class="copy-email">Copy email</button>
+      <small>In the message, write your name and the package you booked.</small>
+    </div>`);
   }
   if (!parts.length) return;
   const box = document.createElement("div");
   box.className = "pay-after";
   box.innerHTML = `<p>Want to pay now? It's optional. You can also pay at your first lesson.</p>${parts.join("")}`;
+  const copy = box.querySelector(".copy-email");
+  if (copy) {
+    copy.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(CONFIG.etransferEmail);
+        copy.textContent = "Copied";
+      } catch {
+        copy.textContent = CONFIG.etransferEmail;
+      }
+    });
+  }
   statusEl.appendChild(box);
 }
 
@@ -509,7 +525,10 @@ function initPaymentInfo() {
   }
   const faq = $("#faq-pay");
   if (faq) {
-    faq.textContent = `You can pay ${ways.join(", or ")}. Online payments go through a secure checkout page and you get an emailed receipt. Booking requests don't need payment upfront.`;
+    faq.textContent = `You can pay ${ways.join(", or ")}.` +
+      (online ? " Online payments go through a secure checkout page and you get an emailed receipt." : "") +
+      (etransfer ? " For e-Transfers, put your name and package in the message." : "") +
+      " Booking requests don't need payment upfront.";
   }
 }
 
