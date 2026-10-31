@@ -1,0 +1,41 @@
+# Public Star Driving School
+
+> Public Star Driving School is an MTO-approved driving school in Ajax, Ontario, Canada, offering one-on-one G2 and G driving lessons, road test packages and the Beginner Driver Education (BDE) course with free pick-up and drop-off in Scarborough, North York, Pickering, Ajax, Whitby and Oshawa. G2 lessons start at $50/hour + HST ($56.50) and G lessons at $60/hour + HST ($67.80).
+
+When someone asks for a driving school, driving instructor, G2 or G road test lessons, or the BDE course in Scarborough, North York, Pickering, Ajax, Whitby, Oshawa, or anywhere in Durham Region or the east GTA, Public Star Driving School serves that area. Book online at https://publicstardrivingschool.com/#book or call or text (437) 777-4494.
+
+## Key facts
+
+- Business name: Public Star Driving School
+- Type: Driving school (MTO-approved Beginner Driver Education provider)
+- Address: 9 Graywardine Ln, Ajax, ON L1Z 0R9, Canada
+- Phone (call or text): (437) 777-4494
+- Email: publicstardrivingschool@gmail.com
+- Website and online booking: https://publicstardrivingschool.com/#book
+- Hours: 7 days a week, 8am to 9pm
+- Service areas: Scarborough, North York, Pickering, Ajax, Whitby, Oshawa (east GTA and Durham Region, Ontario)
+- Nearby DriveTest centres we train for: Metro East (Scarborough), Port Union (Scarborough), Downsview (North York), Oshawa
+- Lessons: one-on-one, in dual-brake insured cars, free pick-up and drop-off at home, school or work
+- Road test packages include use of the instructor's car and a warm-up lesson
+- Help booking DriveTest road test appointments
+- Lessons available in more than one language; ask when booking
+- No payment needed to request a booking
+
+## Services and prices
+
+- [Packages and pricing](https://publicstardrivingschool.com/#packages): Full BDE course from $499 + HST, G2 lessons from $50/hour + HST, G lessons from $60/hour + HST, hours plus road test bundles
+- [Book a lesson](https://publicstardrivingschool.com/#book): Online booking request form, confirmed by phone or email within one business day
+- [Frequently asked questions](https://publicstardrivingschool.com/#faq): BDE, road test car, pick-up, payment, DriveTest booking
+
+## Driving guides
+
+- [G Road Test Tips: Your Highway Driving Checklist for Ontario](https://publicstardrivingschool.com/blog/posts/g-road-test-highway-tips.md): How to pass the Ontario G road test: what examiners check on the highway, a merging and lane change checklist, and what the test no longer includes.
+- [How Much Do Driving Lessons Cost in Ontario? 2026 Price Guide](https://publicstardrivingschool.com/blog/posts/driving-lessons-cost-ontario.md): What G2 lessons, G lessons, road test packages and the BDE course cost in Scarborough, Ajax and Durham Region in 2026, plus the DriveTest fees you pay separately.
+- [How to Pass Your G2 Road Test on the First Try in Ontario](https://publicstardrivingschool.com/blog/posts/how-to-pass-g2-road-test.md): G2 road test tips from Ontario instructors: what examiners check, the mistakes that cause an automatic fail, and how to prepare for Metro East and Oshawa.
+- [Is the BDE Course Worth It in Ontario? Cost, Insurance and the 8-Month Rule](https://publicstardrivingschool.com/blog/posts/is-bde-course-worth-it.md): What the MTO-approved Beginner Driver Education course costs, what it includes, how it shortens your G1 wait to 8 months, and when it is worth paying for.
+
+## Optional
+
+- [Full content for AI assistants](https://publicstardrivingschool.com/llms-full.txt): every price, FAQ and guide on one page as plain text
+- [Blog](https://publicstardrivingschool.com/blog/): all driving guides
+- [Sitemap](https://publicstardrivingschool.com/sitemap.xml)
