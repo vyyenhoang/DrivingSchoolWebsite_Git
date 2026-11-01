@@ -46,7 +46,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] How to pass the G2 road test on the first try (how to pass G2 road test)
 - [x] Is the BDE course worth it (is BDE worth it Ontario)
 - [x] G road test tips: highway driving checklist (G road test tips Ontario, G test highway)
-- [ ] G2 vs G road test: what is the difference (G2 vs G test difference)
+- [x] G2 vs G road test: what is the difference (G2 vs G test difference)
 - [ ] G2 road test automatic fails list (G2 automatic fail Ontario)
 - [ ] Metro East DriveTest: tips for the Scarborough test centre (Metro East DriveTest tips)
 - [ ] Oshawa DriveTest centre road test tips (Oshawa DriveTest tips)
