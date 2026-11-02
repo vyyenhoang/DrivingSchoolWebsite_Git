@@ -24,7 +24,7 @@ Each mistake is marked on a score sheet. Small mistakes add up, and a single dan
 
 ## Mistakes that cause an automatic fail
 
-These are the errors examiners treat as dangerous. One of them is usually enough to fail:
+These are the errors examiners treat as dangerous. One of them is usually enough to fail. For the full list, including the car problems that cancel a test before it starts, see our [G2 automatic fails guide](/blog/g2-road-test-automatic-fails/).
 
 - **Rolling through a stop sign.** Stop fully behind the line, then creep forward if you need to see.
 - **Not yielding the right of way** to pedestrians, cyclists or cars that arrived first.
