@@ -57,7 +57,7 @@ Move your head when you check. Examiners can only score what they can see, and e
 
 Each DriveTest centre has its own mix of roads, school zones and tricky intersections. We train students on the areas around:
 
-- **Metro East** in Scarborough
+- **Metro East** on Lawrence Avenue East (see our [Metro East DriveTest tips](/blog/metro-east-drivetest-tips/))
 - **Port Union** in Scarborough
 - **Downsview** in North York
 - **Oshawa**
