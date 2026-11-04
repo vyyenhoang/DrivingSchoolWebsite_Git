@@ -49,7 +49,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] G2 vs G road test: what is the difference (G2 vs G test difference)
 - [x] G2 road test automatic fails list (G2 automatic fail Ontario)
 - [x] Metro East DriveTest: tips for the Scarborough test centre (Metro East DriveTest tips)
-- [ ] Oshawa DriveTest centre road test tips (Oshawa DriveTest tips)
+- [x] Oshawa DriveTest centre road test tips (Oshawa DriveTest tips)
 - [ ] Port Union DriveTest road test guide (Port Union DriveTest)
 - [ ] How many driving lessons do I need before my G2 test (how many driving lessons do I need)
 - [ ] Ontario G1 to G licence timeline and costs (G1 to G timeline Ontario)

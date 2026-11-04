@@ -74,7 +74,7 @@ If you are taking the G test instead, add expressway practice. Our [G road test 
 
 ## Should you take your test at Metro East or somewhere else?
 
-There is no official ranking of "easy" DriveTest centres, and we will not make one up. The better question is which centre's roads you can practise on most. If you live in Scarborough, North York or East York, Metro East is often the most convenient choice. Students in the east end sometimes prefer Port Union, and students in Pickering, Ajax, Whitby and Oshawa often book Oshawa. Pick the centre near where you can get real practice, then book early, since test dates can fill up.
+There is no official ranking of "easy" DriveTest centres, and we will not make one up. The better question is which centre's roads you can practise on most. If you live in Scarborough, North York or East York, Metro East is often the most convenient choice. Students in the east end sometimes prefer Port Union, and students in Pickering, Ajax, Whitby and Oshawa often book [Oshawa](/blog/oshawa-drivetest-tips/). Pick the centre near where you can get real practice, then book early, since test dates can fill up.
 
 For general tips that apply to any centre, read [how to pass your G2 road test on the first try](/blog/how-to-pass-g2-road-test/).
 
