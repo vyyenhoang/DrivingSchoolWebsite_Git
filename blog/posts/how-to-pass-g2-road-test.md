@@ -66,7 +66,7 @@ Knowing where the school zones, speed changes and busy left turns are makes the 
 
 ## How many lessons do you need before the G2 test?
 
-If you have practised with family, 3 to 5 hours with an instructor is usually enough to fix habits and learn what examiners expect. Brand new drivers often need more. See our [driving lesson prices](/blog/driving-lessons-cost-ontario/) for single lessons and road test bundles. Once you pass, our [G road test highway checklist](/blog/g-road-test-highway-tips/) covers the next step to your full licence, and our [G2 vs G road test comparison](/blog/g2-vs-g-road-test/) explains how the two tests differ.
+If you have practised with family, 3 to 5 hours with an instructor is usually enough to fix habits and learn what examiners expect. Brand new drivers often need more; our guide on [how many driving lessons you need before the G2](/blog/how-many-driving-lessons-before-g2/) helps you judge where you are. See our [driving lesson prices](/blog/driving-lessons-cost-ontario/) for single lessons and road test bundles. Once you pass, our [G road test highway checklist](/blog/g-road-test-highway-tips/) covers the next step to your full licence, and our [G2 vs G road test comparison](/blog/g2-vs-g-road-test/) explains how the two tests differ.
 
 ## Frequently asked questions
 
