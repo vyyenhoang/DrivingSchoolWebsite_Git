@@ -17,7 +17,7 @@ No. Ontario does not require you to take any professional lessons before your G2
 - If you finish a **government-approved driver education course**, you can take the road test after **8 months**.
 - You have **five years** to finish the whole graduated licensing process, or you start over.
 
-So lessons are not a legal box to tick. They are there to get you ready to pass and to drive safely afterwards. If you are thinking about the 8 month option, our guide on [whether the BDE course is worth it](/blog/is-bde-course-worth-it/) walks through the trade-offs.
+So lessons are not a legal box to tick. They are there to get you ready to pass and to drive safely afterwards. If you are thinking about the 8 month option, our guide on [whether the BDE course is worth it](/blog/is-bde-course-worth-it/) walks through the trade-offs, and our [G1 to G licence timeline](/blog/g1-to-g-licence-timeline-ontario/) shows every step from G1 to your full G.
 
 ## How many lessons do most drivers need?
 

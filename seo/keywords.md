@@ -52,7 +52,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] Oshawa DriveTest centre road test tips (Oshawa DriveTest tips)
 - [ ] Port Union DriveTest road test guide (Port Union DriveTest)
 - [x] How many driving lessons do I need before my G2 test (how many driving lessons do I need)
-- [ ] Ontario G1 to G licence timeline and costs (G1 to G timeline Ontario)
+- [x] Ontario G1 to G licence timeline and costs (G1 to G timeline Ontario)
 - [ ] Renting a car for your road test in Ontario (car rental for road test Ontario)
 - [ ] Driving lessons in Ajax: what to expect (driving lessons Ajax)
 - [ ] Driving lessons in Pickering (driving lessons Pickering)
