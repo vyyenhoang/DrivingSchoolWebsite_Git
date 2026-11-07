@@ -88,7 +88,7 @@ At Public Star Driving School, one hour costs $50 + HST ($56.50) for G2 preparat
 
 ### Is it cheaper to buy a driving lesson package?
 
-Usually, yes. Our 5 hours plus road test G2 bundle is $330 + HST, which includes our car on test day. Buying 5 single lessons and renting a car for the test separately would cost more.
+Usually, yes. Our 5 hours plus road test G2 bundle is $330 + HST, which includes our car on test day. Buying 5 single lessons and renting a car for the test separately would cost more. See our guide to [renting a car for your road test](/blog/road-test-car-rental-ontario/).
 
 ### Do driving lesson prices include the road test fee?
 

@@ -50,10 +50,10 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] G2 road test automatic fails list (G2 automatic fail Ontario)
 - [x] Metro East DriveTest: tips for the Scarborough test centre (Metro East DriveTest tips)
 - [x] Oshawa DriveTest centre road test tips (Oshawa DriveTest tips)
-- [ ] Port Union DriveTest road test guide (Port Union DriveTest)
+- [ ] Port Union DriveTest road test guide (Port Union DriveTest) *(skipped 2026-11-07: drivetest.ca blocked automated checks, so the centre address and hours could not be confirmed)*
 - [x] How many driving lessons do I need before my G2 test (how many driving lessons do I need)
 - [x] Ontario G1 to G licence timeline and costs (G1 to G timeline Ontario)
-- [ ] Renting a car for your road test in Ontario (car rental for road test Ontario)
+- [x] Renting a car for your road test in Ontario (car rental for road test Ontario)
 - [ ] Driving lessons in Ajax: what to expect (driving lessons Ajax)
 - [ ] Driving lessons in Pickering (driving lessons Pickering)
 - [ ] Driving lessons in Whitby (driving lessons Whitby)
