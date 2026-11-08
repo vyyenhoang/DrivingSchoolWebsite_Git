@@ -54,7 +54,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] How many driving lessons do I need before my G2 test (how many driving lessons do I need)
 - [x] Ontario G1 to G licence timeline and costs (G1 to G timeline Ontario)
 - [x] Renting a car for your road test in Ontario (car rental for road test Ontario)
-- [ ] Driving lessons in Ajax: what to expect (driving lessons Ajax)
+- [x] Driving lessons in Ajax: what to expect (driving lessons Ajax)
 - [ ] Driving lessons in Pickering (driving lessons Pickering)
 - [ ] Driving lessons in Whitby (driving lessons Whitby)
 - [ ] Driving lessons in Oshawa (driving lessons Oshawa)
