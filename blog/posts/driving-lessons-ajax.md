@@ -89,7 +89,7 @@ A Ministry-approved BDE course lets you take your G2 road test after 8 months in
 
 ## Do you only teach in Ajax?
 
-No. We are based in Ajax, and our instructors also teach in Pickering, Whitby, Oshawa, Scarborough and North York, with free pick-up and drop-off within our service area. Many students start lessons near home and then spend their last lesson around the test centre they booked.
+No. We are based in Ajax, and our instructors also teach in [Pickering](/blog/driving-lessons-pickering/), Whitby, Oshawa, Scarborough and North York, with free pick-up and drop-off within our service area. Many students start lessons near home and then spend their last lesson around the test centre they booked.
 
 ## Frequently asked questions
 

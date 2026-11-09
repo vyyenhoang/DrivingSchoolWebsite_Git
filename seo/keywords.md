@@ -55,7 +55,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] Ontario G1 to G licence timeline and costs (G1 to G timeline Ontario)
 - [x] Renting a car for your road test in Ontario (car rental for road test Ontario)
 - [x] Driving lessons in Ajax: what to expect (driving lessons Ajax)
-- [ ] Driving lessons in Pickering (driving lessons Pickering)
+- [x] Driving lessons in Pickering (driving lessons Pickering)
 - [ ] Driving lessons in Whitby (driving lessons Whitby)
 - [ ] Driving lessons in Oshawa (driving lessons Oshawa)
 - [ ] Driving lessons in North York (driving lessons North York)
