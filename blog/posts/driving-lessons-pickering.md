@@ -97,7 +97,7 @@ A Ministry-approved BDE course lets you take your G2 road test after 8 months in
 
 ## Do you teach outside Pickering?
 
-Yes. We are based in Ajax, and our instructors also teach in Pickering, Whitby, Oshawa, Scarborough and North York, with free pick-up and drop-off within our service area. Many Pickering students start lessons near home and finish with a lesson around the test centre they booked.
+Yes. We are based in Ajax, and our instructors also teach in Pickering, [Whitby](/blog/driving-lessons-whitby/), Oshawa, Scarborough and North York, with free pick-up and drop-off within our service area. Many Pickering students start lessons near home and finish with a lesson around the test centre they booked.
 
 ## Frequently asked questions
 

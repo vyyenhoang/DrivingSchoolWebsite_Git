@@ -56,7 +56,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] Renting a car for your road test in Ontario (car rental for road test Ontario)
 - [x] Driving lessons in Ajax: what to expect (driving lessons Ajax)
 - [x] Driving lessons in Pickering (driving lessons Pickering)
-- [ ] Driving lessons in Whitby (driving lessons Whitby)
+- [x] Driving lessons in Whitby (driving lessons Whitby)
 - [ ] Driving lessons in Oshawa (driving lessons Oshawa)
 - [ ] Driving lessons in North York (driving lessons North York)
 - [ ] Converting a foreign driver's licence in Ontario (foreign licence Ontario exchange)
