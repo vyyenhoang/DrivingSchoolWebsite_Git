@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Public Star Driving School — site script
+   Public Star Driving School: site script
    Edit PRICING below to change packages. Everything else renders from it.
    ========================================================================== */
 
@@ -148,7 +148,7 @@ const REVIEWS = [
   {
     name: "Najeeb Y.",
     rating: 5,
-    text: "⭐️⭐️⭐️⭐️⭐️I Passed My G Test – Thanks to Omaid Faizi!\n\nI had an amazing experience with All Star Driving School, and I can’t thank my instructor Omaid Faizi enough for his incredible guidance and support. He is extremely knowledgeable, patient, and calm — exactly what every student driver needs.\n\nOmaid made every lesson enjoyable and stress-free, always explaining things clearly and helping me feel confident behind the wheel. He pointed out the small details that make a big difference on the test and gave me helpful tips I never would have learned on my own.\n\nThanks to his excellent instruction and encouragement, I passed my G test on the first try! If you’re looking for a top-notch instructor who truly cares about your success, ask for Omaid Faizi. Highly recommend!",
+    text: "⭐️⭐️⭐️⭐️⭐️I Passed My G Test, Thanks to Omaid Faizi!\n\nI had an amazing experience with All Star Driving School, and I can’t thank my instructor Omaid Faizi enough for his incredible guidance and support. He is extremely knowledgeable, patient, and calm, exactly what every student driver needs.\n\nOmaid made every lesson enjoyable and stress-free, always explaining things clearly and helping me feel confident behind the wheel. He pointed out the small details that make a big difference on the test and gave me helpful tips I never would have learned on my own.\n\nThanks to his excellent instruction and encouragement, I passed my G test on the first try! If you’re looking for a top-notch instructor who truly cares about your success, ask for Omaid Faizi. Highly recommend!",
     source: "Google",
   },
   {
@@ -213,7 +213,7 @@ const money = (n) => "$" + n.toLocaleString("en-CA", { minimumFractionDigits: 2,
 const withTax = (n) => Math.round(n * (1 + CONFIG.hst) * 100) / 100;
 // One label used by the cards, tables and booking dropdown so they always match
 const pkgLabel = (prefix, label, price) =>
-  `${prefix} ${label} – $${price} + HST (${money(withTax(price))} total)`;
+  `${prefix} ${label}: $${price} + HST (${money(withTax(price))} total)`;
 
 // Every package keyed by its booking label, so the form can find its payment link
 const allPackages = () => [
@@ -299,7 +299,7 @@ function populatePackageSelect() {
   group("G2 Lessons & Road Test", PRICING.g2.map((r) => pkgLabel("G2", r.label, r.price)));
   group("G Lessons & Road Test", PRICING.g.map((r) => pkgLabel("G", r.label, r.price)));
   const other = document.createElement("option");
-  other.textContent = "Not sure yet – please advise";
+  other.textContent = "Not sure yet, please advise";
   sel.appendChild(other);
 }
 
@@ -413,7 +413,7 @@ function initForm() {
     const fields = Object.fromEntries(new FormData(form));
     const honey = fields._honey;
     delete fields._honey;
-    const subject = `New booking request – ${fields["Full Name"]} (${fields["Package"]})`;
+    const subject = `New booking request: ${fields["Full Name"]} (${fields["Package"]})`;
 
     // Bots fill the hidden field: pretend it worked and send nothing
     if (honey) {

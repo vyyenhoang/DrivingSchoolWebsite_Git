@@ -1,4 +1,4 @@
-# Public Star Driving School — Website
+# Public Star Driving School: Website
 
 **Live site:** https://publicstardrivingschool.com/
 
@@ -21,9 +21,9 @@ All pricing lives in the `PRICING` object at the top of `script.js`.
 The package cards, the G2 / G tables, and the booking form's package dropdown are
 all generated from it, so you only change numbers in one place.
 
-- `bde` — the three full-course tiers (name, price, feature bullets, which one is featured)
-- `g2` — G2 hourly lessons and hours + road test bundles
-- `g` — G hourly lessons and hours + road test bundles
+- `bde`: the three full-course tiers (name, price, feature bullets, which one is featured)
+- `g2`: G2 hourly lessons and hours + road test bundles
+- `g`: G hourly lessons and hours + road test bundles
 
 Prices are entered **before HST**. Every price on the site shows "+ HST" and the 13% HST total, calculated automatically.
 

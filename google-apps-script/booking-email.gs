@@ -51,7 +51,7 @@ function doGet() {
 }
 
 function sendEmail(data) {
-  const subject = String(data.subject || "New booking request – " + (data["Full Name"] || "")).slice(0, 250);
+  const subject = String(data.subject || "New booking request: " + (data["Full Name"] || "")).slice(0, 250);
   const rows = FIELDS.map(function (f) {
     return (
       '<tr><td style="padding:8px 12px;border:1px solid #e4e8ef;background:#f5f7fb;font-weight:bold;white-space:nowrap">' +
@@ -105,7 +105,7 @@ function esc(s) {
  */
 function sendTestEmail() {
   sendEmail({
-    subject: "Test – Public Star booking form",
+    subject: "Test: Public Star booking form",
     "Full Name": "Test Student",
     Phone: "437-777-4494",
     Email: TO,
