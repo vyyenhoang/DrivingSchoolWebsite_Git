@@ -80,7 +80,7 @@ For general advice that works at any centre, read [how to pass your G2 road test
 
 ## Book lessons and our car for your Oshawa test
 
-Our instructors teach around Oshawa and the rest of Durham Region every week. With an hours plus road test package, you get lessons before the test, a warm-up drive on test day, and our instructor's car for the test itself, so you are not relying on a family car that might not pass the vehicle check. We offer free pick-up and drop-off in Oshawa, Whitby, [Ajax](/blog/driving-lessons-ajax/), Pickering, Scarborough and North York.
+Our instructors teach around Oshawa and the rest of Durham Region every week. With an hours plus road test package, you get lessons before the test, a warm-up drive on test day, and our instructor's car for the test itself, so you are not relying on a family car that might not pass the vehicle check. We offer free pick-up and drop-off in [Oshawa](/blog/driving-lessons-oshawa/), [Whitby](/blog/driving-lessons-whitby/), [Ajax](/blog/driving-lessons-ajax/), Pickering, Scarborough and North York.
 
 | G2 package | Price |
 | --- | --- |
