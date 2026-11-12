@@ -58,7 +58,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] Driving lessons in Pickering (driving lessons Pickering)
 - [x] Driving lessons in Whitby (driving lessons Whitby)
 - [x] Driving lessons in Oshawa (driving lessons Oshawa)
-- [ ] Driving lessons in North York (driving lessons North York)
+- [x] Driving lessons in North York (driving lessons North York)
 - [ ] Converting a foreign driver's licence in Ontario (foreign licence Ontario exchange)
 - [ ] G2 licence rules and restrictions (G2 restrictions Ontario)
 - [ ] How to parallel park for your road test (parallel parking tips Ontario)
