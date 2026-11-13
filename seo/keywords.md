@@ -35,7 +35,7 @@ llms.txt and llms-full.txt hand the facts to AI crawlers directly.
 - What is the difference between the G2 and G road test?
 - Which DriveTest centre is easiest near Scarborough?
 - How long do I have to wait between G1, G2 and G in Ontario?
-- How do I convert a foreign driver's licence in Ontario?
+- How do I convert a foreign driver's licence in Ontario? *(answered: foreign licence guide)*
 
 ## Blog queue
 
@@ -50,7 +50,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] G2 road test automatic fails list (G2 automatic fail Ontario)
 - [x] Metro East DriveTest: tips for the Scarborough test centre (Metro East DriveTest tips)
 - [x] Oshawa DriveTest centre road test tips (Oshawa DriveTest tips)
-- [ ] Port Union DriveTest road test guide (Port Union DriveTest) *(skipped 2026-11-07: drivetest.ca blocked automated checks, so the centre address and hours could not be confirmed)*
+- [ ] Port Union DriveTest road test guide (Port Union DriveTest) *(skipped 2026-11-07: drivetest.ca blocked automated checks, so the centre address and hours could not be confirmed; still blocked 2026-11-13)*
 - [x] How many driving lessons do I need before my G2 test (how many driving lessons do I need)
 - [x] Ontario G1 to G licence timeline and costs (G1 to G timeline Ontario)
 - [x] Renting a car for your road test in Ontario (car rental for road test Ontario)
@@ -59,7 +59,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] Driving lessons in Whitby (driving lessons Whitby)
 - [x] Driving lessons in Oshawa (driving lessons Oshawa)
 - [x] Driving lessons in North York (driving lessons North York)
-- [ ] Converting a foreign driver's licence in Ontario (foreign licence Ontario exchange)
+- [x] Converting a foreign driver's licence in Ontario (foreign licence Ontario exchange)
 - [ ] G2 licence rules and restrictions (G2 restrictions Ontario)
 - [ ] How to parallel park for your road test (parallel parking tips Ontario)
 - [ ] Three-point turn and roadside stop: road test step by step (three point turn road test)
