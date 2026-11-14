@@ -60,7 +60,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] Driving lessons in Oshawa (driving lessons Oshawa)
 - [x] Driving lessons in North York (driving lessons North York)
 - [x] Converting a foreign driver's licence in Ontario (foreign licence Ontario exchange)
-- [ ] G2 licence rules and restrictions (G2 restrictions Ontario)
+- [x] G2 licence rules and restrictions (G2 restrictions Ontario)
 - [ ] How to parallel park for your road test (parallel parking tips Ontario)
 - [ ] Three-point turn and roadside stop: road test step by step (three point turn road test)
 - [ ] Nervous about driving? How to beat road test anxiety (road test anxiety tips)

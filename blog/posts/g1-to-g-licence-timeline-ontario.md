@@ -61,7 +61,7 @@ After you pass, you hold a G2 for 12 months. Ontario says G2 drivers can drive o
 
 - Keep a zero blood alcohol level.
 - Carry only as many passengers as there are working seatbelts.
-- If you are 19 or under, between midnight and 5 a.m. you can only carry one passenger aged 19 or under during your first six months on a G2, and up to three after that. These limits do not apply if a fully licensed driver with at least four years of experience is in the front seat, or if your passengers are immediate family.
+- If you are 19 or under, between midnight and 5 a.m. you can only carry one passenger aged 19 or under during your first six months on a G2, and up to three after that. These limits do not apply if a fully licensed driver with at least four years of experience is in the front seat, or if your passengers are immediate family. Our guide to [G2 licence rules and restrictions](/blog/g2-licence-rules-ontario/) covers every G2 condition and the penalties for breaking them.
 
 ## Step 3: the G road test
 
