@@ -7,7 +7,7 @@ keywords: G2 automatic fail Ontario, G2 road test automatic fail, G2 test instan
 answer: DriveTest does not publish an official list of G2 automatic fails, but examiners can stop the test if your driving puts safety at risk, so one dangerous action such as rolling a stop, failing to yield, an unsafe lane change or making the examiner step in usually ends it. Before you even drive, a car problem like a dead brake light, cracked windshield or active dashcam gets the test declared "out-of-order" and you lose 50% of your road test fee. After a fail you generally wait at least 10 days to retest.
 ---
 
-Most students worry about parallel parking, but that is rarely what ends a G2 road test. Tests are usually lost in two ways: something about the car or the paperwork stops the test before it starts, or one dangerous action during the drive ends it early. This guide covers both, using DriveTest's own rules and what our instructors see on test day.
+Most students worry about [parallel parking](/blog/parallel-parking-road-test-ontario/), but that is rarely what ends a G2 road test. Tests are usually lost in two ways: something about the car or the paperwork stops the test before it starts, or one dangerous action during the drive ends it early. This guide covers both, using DriveTest's own rules and what our instructors see on test day.
 
 ## Is there an official G2 automatic fail list?
 
