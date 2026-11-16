@@ -62,7 +62,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] Converting a foreign driver's licence in Ontario (foreign licence Ontario exchange)
 - [x] G2 licence rules and restrictions (G2 restrictions Ontario)
 - [x] How to parallel park for your road test (parallel parking tips Ontario)
-- [ ] Three-point turn and roadside stop: road test step by step (three point turn road test)
+- [x] Three-point turn and roadside stop: road test step by step (three point turn road test)
 - [ ] Nervous about driving? How to beat road test anxiety (road test anxiety tips)
 - [ ] Winter driving tips for new drivers in Ontario (winter driving tips new drivers)
 - [ ] What to bring to your road test in Ontario (what to bring to road test Ontario)

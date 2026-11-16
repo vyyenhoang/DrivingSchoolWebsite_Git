@@ -66,7 +66,7 @@ Practice turns the steps into muscle memory. A few ideas that work well:
 - **Practise in the car you will test in.** Every car has a different length and turning circle. If you test in your instructor's car, practise in it too.
 - **Practise both sides on one-way streets.** Ontario allows parking on both sides of a one-way road unless signs say otherwise, so be ready for either.
 
-Most students need several focused sessions before parallel parking feels easy. Our guide on [how many driving lessons you need before your G2](/blog/how-many-driving-lessons-before-g2/) can help you plan.
+Most students need several focused sessions before parallel parking feels easy. Our guide on [how many driving lessons you need before your G2](/blog/how-many-driving-lessons-before-g2/) can help you plan. The other residential tasks on the same test are covered in our [three-point turn and roadside stop guide](/blog/three-point-turn-roadside-stop-road-test/).
 
 ## Parking rules to remember
 
