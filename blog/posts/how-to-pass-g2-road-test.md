@@ -51,7 +51,7 @@ Move your head when you check. Examiners can only score what they can see, and e
 - **Use a car you know.** Taking the test in the same car you trained in removes one source of nerves. Our road test bundles include the instructor's car and a warm-up drive first.
 - **Expect a vehicle check.** The examiner may ask you to show the signals, brake lights and horn work before you leave.
 - **Ask if you did not hear an instruction.** Asking is fine. Guessing wrong is not.
-- **Do not give up after a mistake.** One minor error rarely fails a test. Reset and keep driving safely.
+- **Do not give up after a mistake.** One minor error rarely fails a test. Reset and keep driving safely. If nerves are your biggest worry, read our [road test anxiety tips](/blog/road-test-anxiety-tips/).
 
 ## Practise the roads near your test centre
 
