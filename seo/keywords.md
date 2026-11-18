@@ -50,7 +50,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] G2 road test automatic fails list (G2 automatic fail Ontario)
 - [x] Metro East DriveTest: tips for the Scarborough test centre (Metro East DriveTest tips)
 - [x] Oshawa DriveTest centre road test tips (Oshawa DriveTest tips)
-- [ ] Port Union DriveTest road test guide (Port Union DriveTest) *(skipped 2026-11-07: drivetest.ca blocked automated checks, so the centre address and hours could not be confirmed; still blocked 2026-11-13)*
+- [ ] Port Union DriveTest road test guide (Port Union DriveTest) *(skipped 2026-11-07: drivetest.ca blocked automated checks, so the centre address and hours could not be confirmed; still blocked 2026-11-13 and 2026-11-18)*
 - [x] How many driving lessons do I need before my G2 test (how many driving lessons do I need)
 - [x] Ontario G1 to G licence timeline and costs (G1 to G timeline Ontario)
 - [x] Renting a car for your road test in Ontario (car rental for road test Ontario)
@@ -64,7 +64,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] How to parallel park for your road test (parallel parking tips Ontario)
 - [x] Three-point turn and roadside stop: road test step by step (three point turn road test)
 - [x] Nervous about driving? How to beat road test anxiety (road test anxiety tips)
-- [ ] Winter driving tips for new drivers in Ontario (winter driving tips new drivers)
+- [x] Winter driving tips for new drivers in Ontario (winter driving tips new drivers)
 - [ ] What to bring to your road test in Ontario (what to bring to road test Ontario)
 - [ ] How to book a G2 road test at DriveTest (how to book G2 road test)
 - [ ] Highway 401 merging tips for new drivers (401 merging tips)

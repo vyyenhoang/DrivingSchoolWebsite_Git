@@ -99,6 +99,7 @@ You hold your G2 for at least 12 months before you can take the G road test. Ont
 
 - **Drive often, not just on weekends.** The 12 months are meant for experience, so use them.
 - **Get highway practice early.** Start with quiet times on the 401 or 412 before rush hour.
+- **Prepare for your first winter.** Our [winter driving tips for new drivers](/blog/winter-driving-tips-new-drivers/) cover winter tires, black ice and skids.
 - **Keep a clean record.** Even two demerit points trigger a warning letter.
 - **Plan late-night trips.** If you are 19 or under, count passengers before you leave after midnight.
 - **Book a refresher before your G test.** A lesson or two helps you fix habits that crept in.
