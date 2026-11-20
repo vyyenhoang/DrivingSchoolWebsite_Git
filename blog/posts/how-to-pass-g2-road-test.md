@@ -47,7 +47,7 @@ Move your head when you check. Examiners can only score what they can see, and e
 
 ## Tips for the day of your test
 
-- **Arrive early** so you are not rushed. Bring your G1 licence and payment if you have not paid.
+- **Arrive early** so you are not rushed. DriveTest asks for at least 30 minutes. Bring your G1 licence and everything on our [road test day checklist](/blog/what-to-bring-to-road-test-ontario/).
 - **Use a car you know.** Taking the test in the same car you trained in removes one source of nerves. Our road test bundles include the instructor's car and a warm-up drive first.
 - **Expect a vehicle check.** The examiner may ask you to show the signals, brake lights and horn work before you leave.
 - **Ask if you did not hear an instruction.** Asking is fine. Guessing wrong is not.

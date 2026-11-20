@@ -65,7 +65,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] Three-point turn and roadside stop: road test step by step (three point turn road test)
 - [x] Nervous about driving? How to beat road test anxiety (road test anxiety tips)
 - [x] Winter driving tips for new drivers in Ontario (winter driving tips new drivers)
-- [ ] What to bring to your road test in Ontario (what to bring to road test Ontario)
+- [x] What to bring to your road test in Ontario (what to bring to road test Ontario)
 - [ ] How to book a G2 road test at DriveTest (how to book G2 road test)
 - [ ] Highway 401 merging tips for new drivers (401 merging tips)
 - [ ] Defensive driving tips every Ontario driver should know (defensive driving tips)
