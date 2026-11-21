@@ -97,7 +97,7 @@ For example, a student who takes our Premium BDE course and later a 3 hours + ro
 
 ## Tips for keeping your timeline on track
 
-- **Book road tests early.** Test dates near Scarborough and Durham can fill up, so book as soon as you know when your waiting period ends.
+- **Book road tests early.** Test dates near Scarborough and Durham can fill up, so book as soon as you know when your waiting period ends. Our guide on [how to book a G2 road test](/blog/how-to-book-g2-road-test/) walks through the DriveTest booking system.
 - **Count from your licence date.** Your 8 or 12 months start when you get the licence, not when you start practising.
 - **Watch the five year limit.** Write down the date your G1 was issued and plan backward from the five year mark.
 - **New to Canada?** If you already hold a licence from another country, read our guide to [converting a foreign driver's licence in Ontario](/blog/foreign-licence-exchange-ontario/) first. Your experience may shorten your path.
