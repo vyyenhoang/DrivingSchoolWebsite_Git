@@ -45,6 +45,8 @@ Practise each of these until you do it without thinking.
 4. **Mirror, then blind spot.** Turn your head to check over your left shoulder before you move over.
 5. **Merge smoothly** into the gap. Do not stop at the end of the ramp unless traffic leaves you no choice.
 
+For a deeper walkthrough of ramps, collector and express lanes and exits, see our [Highway 401 merging tips](/blog/highway-401-merging-tips/).
+
 ### Driving on the highway
 
 - **Keep a safe following distance.** Leave a gap of at least two seconds, more in rain or heavy traffic.

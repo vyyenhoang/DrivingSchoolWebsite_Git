@@ -67,7 +67,7 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] Winter driving tips for new drivers in Ontario (winter driving tips new drivers)
 - [x] What to bring to your road test in Ontario (what to bring to road test Ontario)
 - [x] How to book a G2 road test at DriveTest (how to book G2 road test)
-- [ ] Highway 401 merging tips for new drivers (401 merging tips)
+- [x] Highway 401 merging tips for new drivers (401 merging tips)
 - [ ] Defensive driving tips every Ontario driver should know (defensive driving tips)
 - [ ] Ontario demerit points for G1 and G2 drivers (G2 demerit points Ontario)
 - [ ] How to lower car insurance as a new driver in Ontario (new driver insurance Ontario)
