@@ -45,6 +45,8 @@ Most G2 fails we see are not about control. They come from not looking enough. M
 
 Move your head when you check. Examiners can only score what they can see, and eye-only checks are easy to miss.
 
+These are the same habits behind good everyday driving. Our [defensive driving tips](/blog/defensive-driving-tips-ontario/) explain the full routine of scanning, space and signalling.
+
 ## Tips for the day of your test
 
 - **Arrive early** so you are not rushed. DriveTest asks for at least 30 minutes. Bring your G1 licence and everything on our [road test day checklist](/blog/what-to-bring-to-road-test-ontario/).
