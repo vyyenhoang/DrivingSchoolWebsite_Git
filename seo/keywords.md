@@ -69,6 +69,6 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] How to book a G2 road test at DriveTest (how to book G2 road test)
 - [x] Highway 401 merging tips for new drivers (401 merging tips)
 - [x] Defensive driving tips every Ontario driver should know (defensive driving tips)
-- [ ] Ontario demerit points for G1 and G2 drivers (G2 demerit points Ontario)
+- [x] Ontario demerit points for G1 and G2 drivers (G2 demerit points Ontario)
 - [ ] How to lower car insurance as a new driver in Ontario (new driver insurance Ontario)
 - [ ] Driving lessons for seniors and returning drivers (refresher driving lessons Scarborough)

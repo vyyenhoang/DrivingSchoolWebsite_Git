@@ -79,7 +79,7 @@ Novice drivers reach suspension much sooner than fully licensed drivers. Accordi
 | 6 to 8 | Second warning letter |
 | 9 or more | 60 day licence suspension |
 
-Points stay on your record for two years from the offence date. A fully licensed driver, by comparison, is not suspended until 15 points.
+Points stay on your record for two years from the offence date. A fully licensed driver, by comparison, is not suspended until 15 points. Our guide to [demerit points for G1 and G2 drivers](/blog/g1-g2-demerit-points-ontario/) lists the points for common offences and what happens after a suspension.
 
 ## Escalating penalties for novice drivers
 
