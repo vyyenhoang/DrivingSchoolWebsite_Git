@@ -27,7 +27,7 @@ Without BDE, you must hold your G1 for 12 months before taking the G2 road test.
 
 ### 2. A possible insurance discount
 
-Many Ontario insurers give new drivers a discount for completing an approved course. The amount varies by company, so ask your insurer for a quote with and without a BDE certificate. For young drivers, the yearly saving can make up a large part of the course price.
+Many Ontario insurers give new drivers a discount for completing an approved course. The amount varies by company, so ask your insurer for a quote with and without a BDE certificate. For young drivers, the yearly saving can make up a large part of the course price. Our guide on [how to lower car insurance as a new driver](/blog/new-driver-car-insurance-ontario/) covers other discounts too.
 
 ### 3. Better habits from day one
 
