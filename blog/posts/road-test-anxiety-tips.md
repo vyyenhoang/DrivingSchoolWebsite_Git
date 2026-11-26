@@ -77,7 +77,7 @@ Our instructors work with a lot of first-time and nervous drivers across Ajax, P
 - **Single G2 lessons** are $50 + HST ($56.50) per hour, good for practising one task you dread.
 - **Road test bundles** include lesson time, a warm-up drive right before the test and the use of our car on test day. Our most popular G2 bundle, 5 hours + road test, is $330 + HST ($372.90).
 
-Not sure how much practice you need? Our guide on [how many driving lessons you need before the G2](/blog/how-many-driving-lessons-before-g2/) helps you judge, and [how to pass the G2 road test](/blog/how-to-pass-g2-road-test/) covers the skills examiners look for.
+Not sure how much practice you need? Our guide on [how many driving lessons you need before the G2](/blog/how-many-driving-lessons-before-g2/) helps you judge, and [how to pass the G2 road test](/blog/how-to-pass-g2-road-test/) covers the skills examiners look for. Getting back behind the wheel after years away? Our guide to [refresher driving lessons for seniors and returning drivers](/blog/refresher-driving-lessons-seniors-returning-drivers/) explains Ontario's renewal rules and what a first lesson looks like.
 
 ## Frequently asked questions
 
