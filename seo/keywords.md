@@ -72,3 +72,4 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] Ontario demerit points for G1 and G2 drivers (G2 demerit points Ontario)
 - [x] How to lower car insurance as a new driver in Ontario (new driver insurance Ontario)
 - [x] Driving lessons for seniors and returning drivers (refresher driving lessons Scarborough)
+- [x] Driving lessons in Scarborough (driving lessons Scarborough)
