@@ -73,3 +73,4 @@ Add new ideas anywhere. Search Console queries go to the top.
 - [x] How to lower car insurance as a new driver in Ontario (new driver insurance Ontario)
 - [x] Driving lessons for seniors and returning drivers (refresher driving lessons Scarborough)
 - [x] Driving lessons in Scarborough (driving lessons Scarborough)
+- [x] How to pass the G1 knowledge test in Ontario (G1 knowledge test Ontario)

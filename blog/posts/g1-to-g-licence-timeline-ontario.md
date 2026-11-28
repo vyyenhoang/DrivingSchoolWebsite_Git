@@ -25,7 +25,7 @@ The five year limit is the one people forget. Ontario says you have up to five y
 
 ## Step 1: getting your G1
 
-You can apply for a driver's licence in Ontario once you are at least 16 years old. You pass a vision test and a knowledge test on the rules of the road and traffic signs at a DriveTest centre, and you pay a fee to apply and take the knowledge test. DriveTest keeps the current amounts on its [list of fees](https://drivetest.ca/tests/fees/), so check there before you go.
+You can apply for a driver's licence in Ontario once you are at least 16 years old. You pass a vision test and a knowledge test on the rules of the road and traffic signs at a DriveTest centre, and you pay a fee to apply and take the knowledge test. DriveTest keeps the current amounts on its [list of fees](https://drivetest.ca/tests/fees/), so check there before you go. Our guide on [how to pass the G1 knowledge test](/blog/g1-knowledge-test-ontario/) explains the test format and how to study.
 
 To study, use the official Driver's Handbook. Ontario lists the printed handbook at $14.95 plus taxes.
 
